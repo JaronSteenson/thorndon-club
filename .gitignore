@@ -1,0 +1,7 @@
+.env
+.eslintcache
+.idea/
+.next/
+.npm
+node_modules/
+out/

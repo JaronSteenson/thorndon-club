@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+    apache2:
+        build:
+            context: .
+        ports:
+            - '80:80'
+            - '443:443'
+            - '8090:8090'
+            - '8443:8443'
+        volumes:
+            - ../out:/usr/local/apache2/htdocs
