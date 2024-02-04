@@ -15,12 +15,12 @@ bun dev
 ```
 
 For bash Jaron's profile
+
 ```shell
 guake-thorndon() {
   guake -r thorndon-club && nvm use 21.6.1 && npm run dev;
 }
 ```
-
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

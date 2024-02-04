@@ -22,12 +22,6 @@ body {
         rgb(var(--background-start-rgb));
 }
 
-@layer utilities {
-    .text-balance {
-        text-wrap: balance;
-    }
-}
-
 @layer base {
     h1 {
         @apply text-2xl text-center;
@@ -39,10 +33,33 @@ body {
         @apply text-lg text-center;
     }
     a {
-        @apply text-blue-600 underline;
+        @apply text-primary-600;
+        text-decoration: none;
     }
     section {
         @apply flex flex-col justify-around gap-6;
     }
-}
 
+    [type='radio'],
+    [type='checkbox'] {
+        @apply appearance-none bg-white border-neutral-500 border-2;
+        height: 16px;
+        width: 16px;
+    }
+
+    [type='checkbox'] {
+        @apply rounded;
+    }
+
+    [type='radio']:checked::before,
+    [type='checkbox']:checked::before {
+        content: '';
+        @apply flex bg-neutral-400 w-full h-full;
+        position: relative;
+    }
+
+    [type='radio'],
+    [type='radio']:checked::before {
+        border-radius: 50%;
+    }
+}

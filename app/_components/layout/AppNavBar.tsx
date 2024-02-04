@@ -77,21 +77,25 @@ export default function AppNavBar() {
                         <Link className="flex-none text-xl font-semibold" href="/" aria-label="Site name">
                             {siteName}
                         </Link>
-                        <div className="flex justify-between flex-wrap gap-6">
+                        <div className="flex justify-between flex-wrap gap-3">
                             <div className="hidden lg:flex xl:flex sm:hidden items-center justify-end gap-6">
                                 <Links mainPageLinkProps={mainPageLinkProps} />
                             </div>
+                            <div className="hidden lg:flex xl:flex sm:hidden items-center justify-end gap-6 text-primary-500 font-semibold">
+                                |
+                            </div>
                             <a
-                                className="flex items-center gap-2 font-medium text-gray-500 hover:text-blue-600 md:my-1 md:ps-1 dark:text-gray-400 dark:hover:text-blue-500"
+                                className="flex items-center gap-2 font-medium hover:text-primary-600 md:my-1 md:ps-1 dark:text-gray-400 dark:hover:text-primary-500"
                                 href={helloClubUrl}
                             >
-                                <Image src={helloClubLogo} width="24" height="24" alt="Hello Club login" />
-                                <span>
-                                    Book{' '}
-                                    <span className="hidden sm:hidden md:inline lg:inline xl:inline">
-                                        a court
-                                    </span>
-                                </span>
+                                <Image
+                                    src={helloClubLogo}
+                                    className="hidden sm:hidden md:inline lg:inline xl:inline"
+                                    width="24"
+                                    height="24"
+                                    alt="Hello Club login"
+                                />
+                                Book a court
                             </a>
                             <div className="flex lg:hidden xl:hidden sm:flex md:flex">
                                 <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
@@ -127,7 +131,11 @@ function Links({ mainPageLinkProps }: { mainPageLinkProps: LinkProps[] }) {
     return (
         <>
             {mainPageLinkProps.map(({ href, children }) => (
-                <Link key={href} className="font-medium text-blue-600 md:py-1 dark:text-blue-500" href={href}>
+                <Link
+                    key={href}
+                    className="font-medium text-primary-600 md:py-1 dark:text-primary-500"
+                    href={href}
+                >
                     {children}
                 </Link>
             ))}

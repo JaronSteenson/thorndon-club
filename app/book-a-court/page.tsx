@@ -12,7 +12,7 @@ import { helloClubUrl } from '@/app/globals';
 export default function BookACourt() {
     return (
         <a
-            className="flex items-center gap-x-2 font-medium text-gray-500 hover:text-blue-600 md:border-s md:border-gray-300 md:my-6 md:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-blue-500"
+            className="flex items-center gap-x-2 font-medium text-gray-500 hover:text-primary-600 md:border-s md:border-gray-300 md:my-6 md:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-primary-500"
             href={helloClubUrl}
         >
             <Image src={helloClubLogo} width="24" height="24" alt="Hello Club login" />
