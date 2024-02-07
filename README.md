@@ -8,6 +8,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ```shell
 guake-thorndon() {
-  guake -r thorndon-club && nvm use 21.6.1 && npm run dev;
+  guake -r thorndon-club && cd ~/code/thorndon-club/ && nvm use 21.6.1 && npm run dev;
 }
 ```
