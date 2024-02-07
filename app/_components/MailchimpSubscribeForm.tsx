@@ -60,12 +60,7 @@ export default function MobileLaMailchimpSubscribeForm() {
                 <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
                     <input type="text" name="b_d6baf37078f25e832e9c4f904_208a4ee0e4" tabIndex={-1} />
                 </div>
-                <input
-                    className="bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded"
-                    type="submit"
-                    value="Subscribe"
-                    name="subscribe"
-                />
+                <input className="button-primary" type="submit" value="Subscribe" name="subscribe" />
             </form>
         </>
     );

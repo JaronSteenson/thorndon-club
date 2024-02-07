@@ -23,6 +23,7 @@ body {
 }
 
 @layer base {
+    /* Main content blocks */
     h1 {
         @apply text-2xl text-center;
     }
@@ -40,6 +41,12 @@ body {
         @apply flex flex-col justify-around gap-6;
     }
 
+    /* Buttons  */
+    .button-primary {
+        @apply bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded text-center;
+    }
+
+    /* Radios and checkboxes */
     [type='radio'],
     [type='checkbox'] {
         @apply appearance-none bg-white border-neutral-500 border-2;
