@@ -8,18 +8,14 @@
     --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
-    }
-}
-
 body {
     color: rgb(var(--foreground-rgb));
-    background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb)))
-        rgb(var(--background-start-rgb));
+    background: white;
+}
+
+.card {
+    @apply rounded;
+    box-shadow: 0 1px 1px 1px lightgray;
 }
 
 @layer base {
@@ -34,8 +30,8 @@ body {
         @apply text-lg text-center;
     }
     a {
-        @apply text-primary-600;
         text-decoration: none;
+        @apply text-gray-500;
     }
     section {
         @apply flex flex-col justify-around gap-6;
@@ -61,12 +57,17 @@ body {
     [type='radio']:checked::before,
     [type='checkbox']:checked::before {
         content: '';
-        @apply flex bg-neutral-400 w-full h-full;
+        @apply flex bg-primary-300 w-full h-full;
         position: relative;
     }
 
     [type='radio'],
     [type='radio']:checked::before {
         border-radius: 50%;
+    }
+
+    /* Inputs */
+    input {
+        border: 1px solid lightgray;
     }
 }

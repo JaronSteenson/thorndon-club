@@ -3,12 +3,13 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import AppNavBar from '@/app/_components/layout/AppNavBar';
 import { ReactNode } from 'react';
+import { siteName, siteNameVeryLong } from '@/app/globals';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'Thorndon Club',
-    description: 'The Thorndon Club website',
+    title: siteName,
+    description: siteNameVeryLong,
 };
 
 export default function RootLayout({

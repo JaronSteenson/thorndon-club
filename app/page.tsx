@@ -3,7 +3,7 @@ import MobileLaMailchimpSubscribeForm from '@/app/_components/MailchimpSubscribe
 export default function Home() {
     return (
         <>
-            <section className="w-96">
+            <section className="card p-6 w-96">
                 <h2>Subscribe to our mailing list</h2>
                 <MobileLaMailchimpSubscribeForm />
             </section>

@@ -2,6 +2,7 @@
 
 import { siteName, helloClubUrl } from '@/app/globals';
 import helloClubLogo from '@/public/hello-club-logo.svg';
+import navBarLogo from '@/public/nav-bar-logo.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -17,7 +18,64 @@ const mainPageRoutes = {
 // @ts-ignore
 const mainPageLinkProps = toRouteProps(mainPageRoutes);
 
-function MobileLauncher(props: { onClick: () => void; menuOpen: boolean }) {
+export default function AppNavBar() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const toggleMenu = () => setMenuOpen((menuOpen) => !menuOpen);
+    return (
+        <header className="card flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
+            <nav className="w-full">
+                <div className="items-center md:flex md:flex-col md:items-start md:justify-between p-3 w-full bg-white dark:bg-gray-800 dark:border-gray-700 ">
+                    <div className="flex items-center justify-between flex-wrap h-full w-full">
+                        <Link
+                            className="text-xl font-semibold uppercase flex items-center gap-6"
+                            href="/"
+                            aria-label="Site name"
+                        >
+                            <Image src={navBarLogo} width={50} alt="logo" />
+                            {siteName}
+                        </Link>
+                        <div className="flex justify-between flex-wrap gap-3">
+                            <div className="hidden lg:flex xl:flex sm:hidden items-center justify-end gap-6">
+                                <Links mainPageLinkProps={mainPageLinkProps} />
+                            </div>
+                            <div className="hidden lg:flex xl:flex sm:hidden items-center justify-end gap-6 font-semibold">
+                                |
+                            </div>
+                            <a
+                                className="flex items-center gap-2 font-medium hover:text-primary-600 md:my-1 md:ps-1 dark:text-gray-400 dark:hover:text-primary-500"
+                                href={helloClubUrl}
+                            >
+                                <Image
+                                    src={helloClubLogo}
+                                    className="hidden sm:hidden md:inline lg:inline xl:inline"
+                                    width="24"
+                                    height="24"
+                                    alt="Hello Club logo"
+                                />
+                                Book a court
+                            </a>
+                            <div className="flex lg:hidden xl:hidden sm:flex md:flex">
+                                <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {menuOpen && (
+                    <div className="bg-white m-0 p-6 gap-6 flex lg:hidden xl:hidden sm:flex md:flex flex-col w-full text-center">
+                        <Links mainPageLinkProps={mainPageLinkProps} />
+                    </div>
+                )}
+            </nav>
+        </header>
+    );
+}
+
+interface MobileLauncherProps {
+    onClick: () => void;
+    menuOpen: boolean;
+}
+
+function MobileLauncher(props: MobileLauncherProps) {
     return (
         <button
             onClick={props.onClick}
@@ -66,53 +124,6 @@ function MobileLauncher(props: { onClick: () => void; menuOpen: boolean }) {
     );
 }
 
-export default function AppNavBar() {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const toggleMenu = () => setMenuOpen((menuOpen) => !menuOpen);
-    return (
-        <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
-            <nav className="w-full">
-                <div className="items-center md:flex md:flex-col md:items-start md:justify-between h-12 p-3 w-full bg-white dark:bg-gray-800 dark:border-gray-700 ">
-                    <div className="flex items-center justify-between flex-wrap h-full w-full">
-                        <Link className="flex-none text-xl font-semibold" href="/" aria-label="Site name">
-                            {siteName}
-                        </Link>
-                        <div className="flex justify-between flex-wrap gap-3">
-                            <div className="hidden lg:flex xl:flex sm:hidden items-center justify-end gap-6">
-                                <Links mainPageLinkProps={mainPageLinkProps} />
-                            </div>
-                            <div className="hidden lg:flex xl:flex sm:hidden items-center justify-end gap-6 text-primary-500 font-semibold">
-                                |
-                            </div>
-                            <a
-                                className="flex items-center gap-2 font-medium hover:text-primary-600 md:my-1 md:ps-1 dark:text-gray-400 dark:hover:text-primary-500"
-                                href={helloClubUrl}
-                            >
-                                <Image
-                                    src={helloClubLogo}
-                                    className="hidden sm:hidden md:inline lg:inline xl:inline"
-                                    width="24"
-                                    height="24"
-                                    alt="Hello Club login"
-                                />
-                                Book a court
-                            </a>
-                            <div className="flex lg:hidden xl:hidden sm:flex md:flex">
-                                <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                {menuOpen && (
-                    <div className="bg-white m-0 p-6 gap-6 flex lg:hidden xl:hidden sm:flex md:flex flex-col w-full text-center">
-                        <Links mainPageLinkProps={mainPageLinkProps} />
-                    </div>
-                )}
-            </nav>
-        </header>
-    );
-}
-
 interface LinkProps {
     href: string;
     children: string;
@@ -131,11 +142,7 @@ function Links({ mainPageLinkProps }: { mainPageLinkProps: LinkProps[] }) {
     return (
         <>
             {mainPageLinkProps.map(({ href, children }) => (
-                <Link
-                    key={href}
-                    className="font-medium text-primary-600 md:py-1 dark:text-primary-500"
-                    href={href}
-                >
+                <Link key={href} className="font-medium md:py-1" href={href}>
                     {children}
                 </Link>
             ))}
