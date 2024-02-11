@@ -1,8 +1,8 @@
 'use client';
 
 import { siteName, helloClubUrl } from '@/app/globals';
-import helloClubLogo from '@/public/hello-club-logo.svg';
-import navBarLogo from '@/public/nav-bar-logo.png';
+import helloClubLogo from '@/public/images/hello-club-logo.svg';
+import navBarLogo from '@/public/images/nav-bar-logo.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -31,7 +31,12 @@ export default function AppNavBar() {
                             href="/"
                             aria-label="Site name"
                         >
-                            <Image src={navBarLogo} width={50} alt="logo" />
+                            <Image
+                                className="hidden xs:hidden sm:inline md:inline lg:inline xl:inline"
+                                src={navBarLogo}
+                                width={50}
+                                alt="logo"
+                            />
                             {siteName}
                         </Link>
                         <div className="flex justify-between flex-wrap gap-3">
@@ -46,17 +51,16 @@ export default function AppNavBar() {
                                 href={helloClubUrl}
                             >
                                 <Image
+                                    className="hidden sm:inline md:inline lg:inline xl:inline"
                                     src={helloClubLogo}
-                                    className="hidden sm:hidden md:inline lg:inline xl:inline"
                                     width="24"
                                     height="24"
                                     alt="Hello Club logo"
                                 />
                                 Book a court
                             </a>
-                            <div className="flex lg:hidden xl:hidden sm:flex md:flex">
-                                <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
-                            </div>
+
+                            <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
                         </div>
                     </div>
                 </div>

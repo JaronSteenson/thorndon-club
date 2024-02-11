@@ -18,7 +18,7 @@ guake-thorndon() {
 2. set up build ✅
 3. set up email links instead of other forms ✅
 4. fix favicon: ✅
-5. sponsor wall ⬜
+5. sponsor wall ✅
 6. have rough crack at landing page/calls to action ⬜
 7. get layout and colours ok ⬜
 8. test manual deploy on subdirectory ⬜
