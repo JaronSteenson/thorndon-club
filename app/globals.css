@@ -39,11 +39,11 @@ body {
 
     /* Buttons  */
     .button-primary {
-        @apply bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded text-center;
+        @apply bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-2 rounded text-center;
     }
 
     .button-secondary {
-        @apply bg-secondary-200 hover:bg-secondary-300 text-gray-500 font-bold py-2 px-4 rounded text-center;
+        @apply bg-secondary-200 hover:bg-secondary-300 text-gray-500 font-bold py-2 px-2 rounded text-center;
     }
 
     /* Radios and checkboxes */

@@ -32,26 +32,23 @@ export default function NavBar() {
                                 href="/"
                                 aria-label="Site name"
                             >
-                                <Image
-                                    className="hidden xs:hidden sm:inline md:inline lg:inline xl:inline"
-                                    src={navBarLogo}
-                                    height={50}
-                                    alt="logo"
-                                />
+                                <Image src={navBarLogo} height={50} alt="logo" />
                             </Link>
                         </div>
                         <div className="flex justify-between flex-wrap gap-3">
-                            <div className="hidden sm:hidden md:hidden lg:flex xl:flex items-center justify-end gap-10">
-                                <Links mainPageLinkProps={mainPageLinkProps} />
+                            <div className="flex items-center justify-end gap-10">
+                                <span className="hidden sm:hidden md:hidden lg:flex xl:flex items-center justify-end gap-10">
+                                    <Links mainPageLinkProps={mainPageLinkProps} />
+                                </span>
                                 <a className="button-secondary" href={helloClubUrl}>
                                     <Image
-                                        className="hidden sm:inline md:inline lg:inline xl:inline pr-2"
+                                        className="inline sm:pr-2"
                                         src={helloClubLogo}
-                                        width="24"
                                         height="24"
                                         alt="Hello Club logo"
                                     />
-                                    Book a court
+
+                                    <span className="hidden sm:inline">Book a court</span>
                                 </a>
                             </div>
                             <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
