@@ -19,15 +19,16 @@ guake-thorndon() {
 3. set up email links instead of other forms ✅
 4. fix favicon: ✅
 5. sponsor wall ✅
-6. have rough crack at landing page/calls to action ⬜
-7. get layout and colours ok ⬜
+6. have rough crack at landing page/calls to action ✅
+7. get layout/colours/content ok secondary pages ⬜
 8. test manual deploy on subdirectory ⬜
 9. set action/CD for deploy to subdirectory ⬜
 10. add force build/deploy manual action ⬜
 11. fix readme ⬜
-12. fix up memberships content ⬜
-13. fix up squash content ⬜
-14. fix up hire content ⬜
-15. fix up contact us content ⬜
-16. fix up tennis content ⬜
-17. polish ⬜
+12. fix up landing page design and content ⬜
+13. fix up memberships content ⬜
+14. fix up squash content ⬜
+15. fix up hire content ⬜
+16. fix up contact us content ⬜
+17. fix up tennis content ⬜
+18. polish ⬜
