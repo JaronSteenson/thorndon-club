@@ -1,8 +1,19 @@
-import ardexLogo from '@/public/images/ardex-logo.svg';
-import dataCraftLogo from '@/public/images/data-craft-logo.svg';
-import pelorusTrustLogo from '@/public/images/pelorus-trust-logo.svg';
-import nzctLogo from '@/public//images/nzct-logo.svg';
 import Image from 'next/image';
+import ardexLogo from '@/public/images/logos/ardex-logo.svg';
+import dataCraftLogo from '@/public/images/logos/data-craft-logo.svg';
+import fourWindsLogo from '@/public/images/logos/four-winds-logo-60x202.png';
+import gazleyMotorsLogo from '@/public/images/logos/gazley-motors-logo-60x109.png';
+import grassRootsTrustLogo from '@/public/images/logos/grassroots-trust-logo-60x210.png';
+import grayleyPlasticsLogo from '@/public/images/logos/grayley-plastics-logo-60x151.png';
+import levcoLogo from '@/public/images/logos/levco-logo.png';
+import newWorldLogo from '@/public/images/logos/new-world-thorndon-logo-60x245.png';
+import nzctLogo from '@/public/images/logos/nzct-logo.svg';
+import oneFoundationLogo from '@/public/images/logos/one-foundation-logo-60x122.png';
+import pelorusTrustLogo from '@/public/images/logos/pelorus-trust-logo.svg';
+import pubCharityLogo from '@/public/images/logos/pub-charity-logo-60x108.png';
+import sullivanConsultingLogo from '@/public/images/logos/sullivan-consulting-logo-60x254.png';
+import tabLogo from '@/public/images/logos/tab-logo-60x129.png';
+import theLionFoundationLogo from '@/public/images/logos/the-lion-foundation-logo-60x232.png';
 import { ReactNode } from 'react';
 
 export default function SponsorSection() {
@@ -13,6 +24,7 @@ export default function SponsorSection() {
                 <Row>
                     <ImageLink
                         className="bg-white rounded"
+                        main
                         href="https://www.ardex.co.nz"
                         src={ardexLogo}
                         alt="Ardex logo"
@@ -21,38 +33,35 @@ export default function SponsorSection() {
                 <Row>
                     <ImageLink
                         className="bg-white rounded"
+                        href="https://gazley.com/"
+                        src={gazleyMotorsLogo}
+                        alt="Gazley Motors logo"
+                    />
+                    <ImageLink
+                        className="bg-white rounded"
                         href="https://datacraft.nz/"
                         src={dataCraftLogo}
-                        height={60}
                         alt="DataCraft logo"
                     />
                     <ImageLink
                         href="https://www.newworld.co.nz/lower-north-island/wellington/thorndon"
-                        src="images/new-world-thorndon-logo-60x245.png"
-                        height={60}
-                        width={245}
+                        src={newWorldLogo}
                         alt="New World Thorndon logo"
                     />
                     <ImageLink
                         className="bg-gray-600 p-3 rounded"
                         href="https://www.levco.co.nz"
-                        src="images/levco-logo.png"
-                        height={60}
-                        width={143}
+                        src={levcoLogo}
                         alt="Levco logo"
                     />
                     <ImageLink
                         href="https://www.graleyplastics.co.nz/"
-                        src="images/grayley-plastics-logo-60x151.png"
-                        height={60}
-                        width={151}
+                        src={grayleyPlasticsLogo}
                         alt="Grayley Plastics logo"
                     />
                     <ImageLink
                         href="https://sullivanconsulting.co.nz/"
-                        src="images/sullivan-consulting-logo-60x254.png"
-                        height={60}
-                        width={254}
+                        src={sullivanConsultingLogo}
                         alt="Sullivan Consulting logo"
                     />
                 </Row>
@@ -63,59 +72,41 @@ export default function SponsorSection() {
                     <ImageLink
                         href="https://www.pelorustrust.net.nz/"
                         src={pelorusTrustLogo}
-                        height={60}
                         alt="Pelourus Trust logo"
                     />
-                    <ImageLink
-                        href="https://www.tabnz.org/"
-                        src="images/tab-logo-60x129.png"
-                        height={60}
-                        width={129}
-                        alt="TAB logo"
-                    />
+                    <ImageLink href="https://www.tabnz.org/" src={tabLogo} alt="TAB logo" />
                     <ImageLink
                         className="bg-black p-1.5 rounded"
                         href="https://www.nzct.org.nz/"
                         src={nzctLogo}
-                        height={60}
                         alt="nzct logo"
                     />
                     <ImageLink
                         href="https://lionfoundation.nz/"
-                        src="images/the-lion-foundation-logo-60x232.png"
-                        height={60}
-                        width={232}
+                        src={theLionFoundationLogo}
                         alt="The Lion Foundation logo"
                     />
                     <ImageLink
                         href="https://www.fourwindsfoundation.co.nz/"
-                        src="images/four-winds-logo-60x202.png"
-                        height={60}
-                        width={202}
+                        src={fourWindsLogo}
                         alt="Four Winds logo"
                     />
                     <ImageLink
                         className="bg-gray-700 p-1.5 rounded"
                         href="https://onefoundation.nz/"
-                        src="images/one-foundation-logo-60x122.png"
-                        height={60}
-                        width={122}
+                        src={oneFoundationLogo}
                         alt="One Foundation logo"
                     />
                     <ImageLink
                         href="https://www.grassrootstrust.co.nz/"
-                        src="images/grassroots-trust-logo-60x210.png"
-                        height={60}
-                        width={210}
+                        src={grassRootsTrustLogo}
                         alt="Grassroots trust logo"
                     />
                     <ImageLink
                         className="bg-black p-1.5 rounded"
                         href="https://www.pubcharitylimited.org.nz/"
-                        src="images/pub-charity-logo-60x108.png"
-                        height={60}
-                        width={108}
-                        alt="Pub Charity Consulting logo"
+                        src={pubCharityLogo}
+                        alt="Pub Charity logo"
                     />
                 </Row>
             </section>
@@ -134,27 +125,19 @@ function Row({ children }: RowProps) {
 interface ImageLinkProps {
     className?: string;
     href: string;
-    src: string;
+    src: any;
     alt: string;
-    width?: number;
-    height?: number;
+    main?: boolean;
 }
 
-function ImageLink({
-    className = undefined,
-    href,
-    src,
-    alt,
-    width = undefined,
-    height = undefined,
-}: ImageLinkProps) {
-    if (!className && !width) {
+function ImageLink({ className = undefined, main = undefined, href, src, alt }: ImageLinkProps) {
+    if (!className) {
         className = 'bg-gray-100 rounded'; // Very cheap and simple loading skelly.
     }
 
     return (
         <a className={className} href={href} target="_blank" rel="noopener">
-            <Image src={src} alt={alt} width={width} height={height} loading="lazy" />
+            <Image src={src} alt={alt} height={main ? 140 : 60} loading="lazy" />
         </a>
     );
 }

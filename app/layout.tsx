@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import AppNavBar from '@/app/_components/layout/AppNavBar';
+import NavBar from '@/app/_components/NavBar';
 import { ReactNode } from 'react';
 import { siteName, siteNameVeryLong } from '@/app/globals';
 
@@ -20,7 +20,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={inter.className}>
-                <AppNavBar />
+                <NavBar />
                 <main className="flex min-h-screen flex-col items-center justify-center p-12 gap-12">
                     {children}
                 </main>

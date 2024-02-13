@@ -9,7 +9,7 @@
 }
 
 body {
-    color: rgb(var(--foreground-rgb));
+    @apply text-secondary-600;
     background: white;
 }
 
@@ -21,13 +21,13 @@ body {
 @layer base {
     /* Main content blocks */
     h1 {
-        @apply text-2xl text-center;
+        @apply text-5xl text-center font-bold;
     }
     h2 {
-        @apply text-xl text-center;
+        @apply text-2xl text-center font-semibold;
     }
     h3 {
-        @apply text-lg text-center;
+        @apply text-xl text-center font-semibold;
     }
     a {
         text-decoration: none;
@@ -40,6 +40,10 @@ body {
     /* Buttons  */
     .button-primary {
         @apply bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-4 rounded text-center;
+    }
+
+    .button-secondary {
+        @apply bg-secondary-200 hover:bg-secondary-300 text-gray-500 font-bold py-2 px-4 rounded text-center;
     }
 
     /* Radios and checkboxes */

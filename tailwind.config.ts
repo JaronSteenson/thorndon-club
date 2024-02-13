@@ -12,7 +12,7 @@ const config: Config = {
         extend: {
             colors: {
                 primary: colors.green,
-                secondary: colors.yellow,
+                secondary: colors.gray,
                 neutral: colors.gray,
             },
             screens: {
