@@ -1,14 +1,13 @@
 export default function Memberships() {
     return (
         <section>
-            <p>We have a wide range of Membership types and payment methods to meet your needs.</p>
-            <h2>Pricing guide</h2>
+            <h2>Quick guide</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Membership</th>
-                        <th>Annual </th>
-                        <th>Monthly </th>
+                        <th>Type</th>
+                        <th>Annual</th>
+                        <th>Monthly</th>
                         <th>Notes</th>
                     </tr>
                 </thead>
@@ -85,7 +84,7 @@ export default function Memberships() {
                     </tr>
                 </tbody>
             </table>
-            <h2>Membership type information</h2>
+            <h2>Further info</h2>
             <h3>Casual hourly hireage</h3>
             <p>
                 Casual hourly hireage of courts is $20 per hour (for non members). This is done by registering

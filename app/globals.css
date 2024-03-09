@@ -79,4 +79,15 @@ body {
     ul {
         list-style-type: square;
     }
+
+    /* Tables */
+    td,
+    th {
+        @apply p-2.5;
+        text-align: left;
+    }
+
+    tr:nth-child(odd) td {
+        @apply bg-gray-100 rounded;
+    }
 }
