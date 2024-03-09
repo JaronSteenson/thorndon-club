@@ -1,6 +1,7 @@
 export default function Squash() {
     return (
         <>
+            <h1>Squash</h1>
             <section>
                 <h2>Our Facilities</h2>
                 <p>

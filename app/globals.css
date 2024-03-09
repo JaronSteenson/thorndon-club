@@ -74,4 +74,9 @@ body {
     input {
         border: 1px solid lightgray;
     }
+
+    /* Lists */
+    ul {
+        list-style-type: square;
+    }
 }

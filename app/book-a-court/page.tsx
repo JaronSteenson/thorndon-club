@@ -1,4 +1,4 @@
-import helloClubLogo from '@/public/logos/images/hello-club-logo.svg';
+import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
 import Image from 'next/image';
 import { helloClubUrl } from '@/app/globals';
 

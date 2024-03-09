@@ -1,8 +1,8 @@
 export default function Tennis() {
     return (
         <>
+            <h1>Tennis</h1>
             <section>
-                <h1>Tennis</h1>
                 <p>
                     Our facilities include 2 astro courts, 1 hard court and 2 grass courts, perfect for Boris
                     Becker style dive volleys! Courts may be booked at anytime using our online booking
@@ -17,22 +17,18 @@ export default function Tennis() {
                     games you’ve been playing – then Interclub is the competition for you. Interclub is all
                     about being a team player and is a great way to improve your game!
                 </p>
+                <h3>What happens?</h3>
                 <p>
-                    <strong>What happens?</strong> Where possible, you will be placed in a team from four to
-                    eight players of similarly graded ability and with a team captain. You play once a week on
-                    Saturday, 8:30-12 noon for Tecnifibre teams and 1-5pm for premier teams. Games are
-                    throughout the Wellington region. Most teams train together on Tuesday nights.
+                    Where possible, you will be placed in a team from four to eight players of similarly
+                    graded ability and with a team captain. You play once a week on Saturday, 8:30-12 noon for
+                    Tecnifibre teams and 1-5pm for premier teams. Games are throughout the Wellington region.
+                    Most teams train together on Tuesday nights.
                 </p>
+                <h3>Who can play?</h3>
                 <p>
-                    <strong>Who can play?</strong> This competition is only open to full club members. New
-                    Member and want to play Interclub? Register your interest by contacting the tennis club
-                    captain, Celeste Valera – Tennis Club Captain, at 021 190 1132 or info@chelez17@yahoo.com.
-                </p>
-                <p>
-                    <strong>Remember:</strong> Interclub is all about being a team player and rallying
-                    together as a team. There is nothing like the friendships you form from an Interclub team,
-                    traveling together to a destination, and of course supporting each other on and off the
-                    court.
+                    This competition is only open to full club members. New Member and want to play Interclub?
+                    Register your interest by contacting the tennis club captain, Celeste Valera – Tennis Club
+                    Captain, at 021 190 1132 or info@chelez17@yahoo.com.
                 </p>
             </section>
             <section>
@@ -46,32 +42,34 @@ export default function Tennis() {
                     <li>Sunday afternoons from 2 pm until 6 pm</li>
                     <li>Wednesday evenings from 5.30 pm until about 7.30 pm</li>
                 </ul>
+                <h3>What happens on club day?</h3>
                 <p>
-                    <strong>What happens on club day?</strong> Club days are friendly tennis matches
-                    coordinated by a volunteer club member on each club day. All people that turn up to play
-                    will be matched with three other players to play doubles matches. An afternoon tea is
-                    served on Saturdays and the bar is open on Wednesdays from 5.30 pm and Saturdays from 4.30
-                    pm.
+                    Club days are friendly tennis matches coordinated by a volunteer club member on each club
+                    day. All people that turn up to play will be matched with three other players to play
+                    doubles matches. An afternoon tea is served on Saturdays and the bar is open on Wednesdays
+                    from 5.30 pm and Saturdays from 4.30 pm.
                 </p>
+                <h3>How many courts do we have?</h3>
                 <p>
-                    <strong>How many courts do we have?</strong> We use one hard court, two astro courts, and
-                    two grass courts. There is usually a little wait between games whilst other games finish.
-                    Some Saturdays there is an interclub game which reduces the number of courts available for
-                    club day, but we give people good warning of this. This means that we can have up to 30
-                    people during a club day and everyone gets several games.
+                    We use one hard court, two astro courts, and two grass courts. There is usually a little
+                    wait between games whilst other games finish. Some Saturdays there is an interclub game
+                    which reduces the number of courts available for club day, but we give people good warning
+                    of this. This means that we can have up to 30 people during a club day and everyone gets
+                    several games.
                 </p>
+                <h3>What if I’m not a member?</h3>
                 <p>
-                    <strong>What if I’m not a member?</strong> You can come and give it a try for two club
-                    days to see if it suits you before deciding whether to join the club.
+                    You can come and give it a try for two club days to see if it suits you before deciding
+                    whether to join the club.
                 </p>
+                <h3>What if I’m just a beginner at Tennis?</h3>
                 <p>
-                    <strong>What if I’m just a beginner at Tennis?</strong> If you are a complete beginner
-                    club day can be challenging because you will be matched up with players with a wide range
-                    of skills. However, this can be useful to see how your skills match up. We want to
-                    encourage and welcome new members and will try and assist. There is coaching at the club,
-                    and people often find that with some lessons and practice they are quickly able to join in
-                    fully. If you have any questions, please just email our club manager, Brad Watts:
-                    info@thorndonclub.co.nz.
+                    If you are a complete beginner club day can be challenging because you will be matched up
+                    with players with a wide range of skills. However, this can be useful to see how your
+                    skills match up. We want to encourage and welcome new members and will try and assist.
+                    There is coaching at the club, and people often find that with some lessons and practice
+                    they are quickly able to join in fully. If you have any questions, please just email our
+                    club manager, Brad Watts: info@thorndonclub.co.nz.
                 </p>
             </section>
         </>

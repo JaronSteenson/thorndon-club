@@ -11,7 +11,7 @@ export default function EmailLink({ subject, body, children }: Props) {
     const href = `mailto:${clubEmail}?subject=${encodeURIComponent(subject)}${andBody}`;
 
     return (
-        <a className="button-primary flex-grow" href={href}>
+        <a className="button-secondary flex-grow" href={href}>
             {children}
         </a>
     );
