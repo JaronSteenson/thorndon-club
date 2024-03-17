@@ -7,32 +7,67 @@ interface Props {
     role: string;
     phone: string;
     email: string;
-    avatar: any;
+    avatar?: any;
 }
 
 export default function ContactCard({ name, role, phone, email, avatar }: Props) {
     return (
         <>
-            <div className="card p-3 w-80">
-                <h3>
-                    {name} - {role}
-                </h3>
-                <div className="flex flex-wrap items-center justify-between gap-3 pt-6">
-                    <Image
-                        className="rounded-xl bg-gray-100"
-                        src={avatar}
-                        alt={`${role} avatar`}
-                        width={60}
-                        height={60}
-                    />
-                    <div>
-                        <a href={`tel:${phone}`}>{formatPhone(phone)}</a>
-                        <br />
-                        <a href={`mailto:${email}`}>{email}</a>
-                    </div>
+            <div className="card p-3">
+                <div className="flex flex-wrap items-center justify-between gap-4">
+                    <AvatarImage name={name} role={role} avatar={avatar} />
+                    <TitleSection name={name} role={role} />
+                </div>
+                <div className="text-center text-sm mt-2">
+                    <a href={`tel:${phone}`}>{formatPhone(phone)}</a>
+                    <br />
+                    <a href={`mailto:${email}`}>{email}</a>
                 </div>
             </div>
         </>
+    );
+}
+
+interface TitleSectionProps {
+    name: string;
+    role: string;
+}
+
+function TitleSection({ name, role }: TitleSectionProps) {
+    return (
+        <div>
+            <h3 className="text-left font-bold">{name}</h3>
+            <h4 className="font-semibold">{role}</h4>
+        </div>
+    );
+}
+
+interface AvatarImageProps {
+    name: string;
+    role: string;
+    avatar?: any;
+}
+
+function AvatarImage({ name, role, avatar }: AvatarImageProps) {
+    if (!avatar) {
+        const [first, last] = name.split(' ');
+        return (
+            <div
+                className="rounded-xl bg-gray-100 flex justify-center items-center text-2xl"
+                style={{ width: 60, height: 60 }}
+            >
+                {first.charAt(0)} {last.charAt(0)}
+            </div>
+        );
+    }
+    return (
+        <Image
+            className="rounded-xl bg-gray-100"
+            src={avatar}
+            alt={`${role} avatar`}
+            width={60}
+            height={60}
+        />
     );
 }
 
