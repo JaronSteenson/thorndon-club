@@ -1,6 +1,6 @@
 'use client';
 
-import { helloClubUrl } from '@/app/globals';
+import { helloClubUrl, merchStoreLink } from '@/app/globals';
 import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
 import navBarLogo from '@/public/images/logos/nav-bar-logo-70x337.png';
 import Link from 'next/link';
@@ -141,6 +141,9 @@ function Links({ mainPageLinkProps }: { mainPageLinkProps: LinkProps[] }) {
                     {children}
                 </Link>
             ))}
+            <a className="font-medium md:py-1" rel="noopener" href={merchStoreLink}>
+                Uniforms
+            </a>
         </>
     );
 }

@@ -1,10 +1,10 @@
 export const clubEmail = 'info@thorndonclub.co.nz' as const;
 export const clubManager = 'Brad Watts' as const;
 export const clubManagerPhone = '0273905892' as const;
-
 export const squashCaptain = 'Nathan Dunning' as const;
 export const squashCaptainPhone = '021951915' as const;
 export const squashCaptainEmail = 'squash@thorndonclub.co.nz' as const;
+export const merchStoreLink = 'https://codesport.co.nz/catalog/TTSC-1106899.htmx';
 export const president = 'Rod Turner' as const;
 export const presidentPhone = '021891458' as const;
 export const presidentEmail = 'rod.turner1@outlook.com' as const;

@@ -4,6 +4,7 @@ import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerCo
 import TennisCaptainContactCard from '@/app/_components/ContactCards/TennisCaptainContactCard';
 import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCaptainContactCard';
 import PresidentContactCard from '@/app/_components/ContactCards/PresidentContactCard';
+import { merchStoreLink } from '@/app/globals';
 
 export default function ContactUs() {
     return (
@@ -31,6 +32,10 @@ export default function ContactUs() {
                 <a href="https://www.google.com/maps/@-41.273033,174.779612,19z">
                     4 Katherine Ave, Thorndon, Wellington 6011
                 </a>
+            </section>
+            <section>
+                <h3>Club uniforms</h3>
+                <a href={merchStoreLink}>{merchStoreLink}</a>
             </section>
             <section>
                 <h2>Report an accident or submit a complaint</h2>
