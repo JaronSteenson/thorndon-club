@@ -1,0 +1,3 @@
+Skip Jekyll pre-processing for github pages.
+Which allows directories that start with _ to work correctly,
+which we need for next js.
