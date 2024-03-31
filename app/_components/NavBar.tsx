@@ -25,7 +25,7 @@ export default function NavBar() {
     return (
         <header className="navbar flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
             <nav className="w-full">
-                <div className="items-center md:flex md:flex-col md:items-start md:justify-between p-3 w-full bg-white dark:bg-gray-800 dark:border-gray-700 ">
+                <div className="items-center md:flex md:flex-col md:items-start md:justify-between p-3 w-full bg-white">
                     <div className="flex items-center justify-between flex-wrap h-full w-full">
                         <div className="flex items-center gap-6">
                             <Link
