@@ -23,9 +23,9 @@ export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen((menuOpen) => !menuOpen);
     return (
-        <header className="navbar flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
+        <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
             <nav className="w-full">
-                <div className="items-center md:flex md:flex-col md:items-start md:justify-between p-3 w-full bg-white">
+                <div className="items-center md:flex md:flex-col md:items-start md:justify-between p-3 w-full">
                     <div className="flex items-center justify-between flex-wrap h-full w-full">
                         <div className="flex items-center gap-6">
                             <Link
@@ -47,7 +47,7 @@ export default function NavBar() {
                     </div>
                 </div>
                 {menuOpen && (
-                    <div className="bg-white m-0 p-6 gap-6 flex sm:flex md:fle lg:hidden xl:hiddenx flex-col w-full text-center">
+                    <div className="m-0 p-6 gap-6 flex sm:flex md:fle lg:hidden xl:hiddenx flex-col w-full text-center">
                         <Links mainPageLinkProps={mainPageLinkProps} />
                     </div>
                 )}
@@ -67,8 +67,6 @@ function MobileLauncher(props: MobileLauncherProps) {
             onClick={props.onClick}
             type="button"
             className="w-8 h-8 flex sm:flex md:fle lg:hidden xl:hiddenx justify-center items-center"
-            data-hs-collapse="#navbar-collapse-with-animation"
-            aria-controls="navbar-collapse-with-animation"
             aria-label="Toggle navigation"
         >
             {!props.menuOpen && (

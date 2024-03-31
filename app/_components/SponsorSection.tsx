@@ -18,12 +18,12 @@ import { ReactNode } from 'react';
 
 export default function SponsorSection() {
     return (
-        <>
-            <section>
-                <h2 className="text-3xl">Our sponsors</h2>
+        <div className="sponsors-sections">
+            <section className="pt-6">
+                <h2 className="text-4xl text-neutral-700">Our sponsors</h2>
                 <Row>
                     <ImageLink
-                        className="bg-white rounded"
+                        className="rounded"
                         main
                         href="https://www.ardex.co.nz"
                         src={ardexLogo}
@@ -32,13 +32,13 @@ export default function SponsorSection() {
                 </Row>
                 <Row>
                     <ImageLink
-                        className="bg-white rounded"
+                        className="rounded"
                         href="https://gazley.com/"
                         src={gazleyMotorsLogo}
                         alt="Gazley Motors logo"
                     />
                     <ImageLink
-                        className="bg-white rounded"
+                        className="rounded"
                         href="https://datacraft.nz/"
                         src={dataCraftLogo}
                         alt="DataCraft logo"
@@ -66,8 +66,8 @@ export default function SponsorSection() {
                     />
                 </Row>
             </section>
-            <section className="pt-6">
-                <h2 className="text-3xl">Our funders</h2>
+            <section className="pt-24">
+                <h2 className="text-4xl text-neutral-700">Our funders</h2>
                 <Row>
                     <ImageLink
                         href="https://www.pelorustrust.net.nz/"
@@ -110,7 +110,7 @@ export default function SponsorSection() {
                     />
                 </Row>
             </section>
-        </>
+        </div>
     );
 }
 
@@ -131,10 +131,6 @@ interface ImageLinkProps {
 }
 
 function ImageLink({ className = undefined, main = undefined, href, src, alt }: ImageLinkProps) {
-    if (!className) {
-        className = 'bg-gray-100 rounded'; // Very cheap and simple loading skelly.
-    }
-
     return (
         <a className={className} href={href} target="_blank" rel="noopener">
             <Image src={src} alt={alt} height={main ? 140 : 60} loading="lazy" />

@@ -11,7 +11,7 @@ interface Props {
 export default function ContactCard({ name, role, phone, email, avatar }: Props) {
     return (
         <>
-            <div className="contact-card p-3">
+            <div className="contact-card">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                     <AvatarImage name={name} role={role} avatar={avatar} />
                     <TitleSection name={name} role={role} />

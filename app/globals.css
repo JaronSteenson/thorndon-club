@@ -10,28 +10,46 @@ body {
     background: white;
 }
 
-.navbar {
-    @apply rounded;
+main {
+    @apply bg-neutral-50;
+}
+
+.elevation {
     box-shadow: 0 1px 2px 1px lightgray;
+}
+
+nav {
+    @apply bg-neutral-100 elevation;
     width: 100%;
 }
 
 .card {
-    @apply rounded;
-    box-shadow: 0 1px 2px 1px lightgray;
+    @apply bg-neutral-100 elevation rounded p-6 w-96;
     width: fit-content;
-    min-width: 24rem;
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+.iframe-card {
+    @apply card;
+    width: 400px;
+}
+
+.form-card {
+    @apply card;
+    width: 600px;
 }
 
 .contact-card {
-    @apply rounded;
-    box-shadow: 0 1px 2px 1px lightgray;
-    width: fit-content;
-    min-width: 16rem;
+    @apply card;
+    padding: 1rem;
+    min-width: 18rem;
 }
 
-.contact-cards {
-    @apply flex flex-wrap justify-between sm:justify-center gap-10 sm:gap-5;
+.sponsors-sections {
+    /* Some of the sponsor images have pure white backgrounds with no margin */
+    @apply elevation bg-white p-6;
+    min-width: 100vw;
 }
 
 @layer base {
@@ -50,7 +68,7 @@ body {
         @apply text-gray-500;
     }
     section {
-        @apply flex flex-col justify-around gap-3;
+        @apply flex flex-col justify-around items-center gap-3;
     }
 
     /* Buttons  */

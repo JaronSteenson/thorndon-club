@@ -21,7 +21,7 @@ export default function RootLayout({
         <html lang="en">
             <body className={inter.className}>
                 <NavBar />
-                <main className="flex min-h-screen flex-col items-center justify-center p-12 gap-12">
+                <main className="flex min-h-screen flex-col items-center justify-center py-12 gap-12">
                     {children}
                 </main>
             </body>

@@ -19,16 +19,16 @@ export default function Home() {
                 <LandingPageImages />
             </section>
             <div className="flex flex-wrap gap-12 items-start justify-center">
-                <section className="card p-6">
+                <section className="iframe-card">
                     <h2>Find us</h2>
                     <GoogleMapIframe height={400} />
                 </section>
-                <section className="card p-6">
+                <section className="iframe-card">
                     <h2>Follow us</h2>
                     <FacebookIframe height={400} />
                 </section>
             </div>
-            <section className="card p-6">
+            <section className="form-card">
                 <h2>Keep in the loop</h2>
                 <MailchimpSubscribeForm />
             </section>

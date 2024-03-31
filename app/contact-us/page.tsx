@@ -5,37 +5,28 @@ import TennisCaptainContactCard from '@/app/_components/ContactCards/TennisCapta
 import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCaptainContactCard';
 import PresidentContactCard from '@/app/_components/ContactCards/PresidentContactCard';
 import GoogleMapIframe from '@/app/_components/GoogleMapIFrame';
-import MailchimpSubscribeForm from '@/app/_components/MailchimpSubscribeForm';
 import FacebookIframe from '@/app/_components/FacebookIframe';
 
 export default function ContactUs() {
     return (
         <>
-            <section>
-                <h3>General</h3>
-                <div className="contact-cards">
-                    <ClubManagerContactCard />
-                    <PresidentContactCard />
-                </div>
+            <section className="flex flex-wrap flex-row justify-center gap-12">
+                <ClubManagerContactCard />
+                <PresidentContactCard />
+                <SquashCaptainContactCard />
+                <TennisCaptainContactCard />
             </section>
-            <section>
-                <h3>Club captains</h3>
-                <div className="contact-cards">
-                    <SquashCaptainContactCard />
-                    <TennisCaptainContactCard />
-                </div>
-            </section>
-            <div className="flex flex-wrap gap-2 items-start justify-center">
-                <section className="card m-12 p-6 w-96">
+            <div className="flex flex-wrap gap-12 items-start justify-center">
+                <section className="card iframe-card">
                     <h2>Find us</h2>
                     <GoogleMapIframe height={300} />
                 </section>
-                <section className="card m-12 p-6 w-96">
+                <section className="card">
                     <h2>Follow us</h2>
                     <FacebookIframe height={300} />
                 </section>
             </div>
-            <section>
+            <section className="card">
                 <h2>Report an accident or submit a complaint</h2>
                 <p className="bg-blue-200 p-3 rounded">
                     Please note accidents should be reported within 24 hours.
