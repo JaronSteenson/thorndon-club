@@ -1,3 +1,5 @@
+@import 'react-slideshow-image/dist/styles.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -6,16 +8,15 @@
 }
 
 body {
-    @apply text-secondary-600;
-    background: white;
+    @apply text-secondary-600 bg-white;
 }
 
 main {
-    @apply bg-neutral-100 flex min-h-screen flex-col items-center justify-center py-12 gap-12;
+    @apply bg-white flex min-h-screen flex-col items-center py-12 gap-12;
 }
 
 main:has(.sponsors-sections) {
-    @apply pb-0 pt-1 md:pt-6;
+    @apply pb-0;
 }
 
 .elevation {
@@ -23,12 +24,42 @@ main:has(.sponsors-sections) {
 }
 
 nav {
-    @apply bg-white elevation;
+    @apply bg-neutral-50 elevation;
     width: 100%;
 }
 
+.slide-show {
+    @apply w-full rounded;
+    max-width: 100vw;
+    @media (min-width: 1200px) {
+        max-width: 1200px;
+    }
+}
+
+.slide-show-image {
+    @apply rounded bg-neutral-800;
+}
+
+.react-slideshow-container .nav:first-of-type {
+    left: 15px;
+    @media (min-width: 1400px) {
+        left: -65px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+.react-slideshow-container .nav:last-of-type {
+    right: 15px;
+    @media (min-width: 1400px) {
+        right: -65px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
 .card {
-    @apply bg-white elevation rounded p-6;
+    @apply bg-neutral-50 elevation rounded p-6;
     width: fit-content;
     max-width: 100vw;
     overflow: hidden;
@@ -39,6 +70,14 @@ nav {
     width: 100vw;
     @media (min-width: 400px) {
         width: 400px;
+    }
+}
+
+.overview-card {
+    @apply card;
+    width: 100vw;
+    @media (min-width: 300px) {
+        width: 350px;
     }
 }
 
@@ -60,6 +99,15 @@ nav {
     /* Some of the sponsor images have pure white backgrounds with no margin */
     @apply elevation bg-white p-6 pb-24;
     min-width: 100vw;
+}
+
+.grid-4x4 {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+    align-items: center;
+    justify-content: center;
 }
 
 @layer base {
@@ -122,6 +170,12 @@ nav {
     /* Lists */
     ul {
         list-style-type: square;
+    }
+    li {
+        @apply ml-6;
+    }
+    li::marker {
+        @apply text-primary-500;
     }
 
     /* Tables */

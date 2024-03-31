@@ -1,5 +1,4 @@
 import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerContactCard';
-import grassCourt1Thumb from '@/public/images/photos/grass-courts-1-500x750.png';
 import grassCourt1 from '@/public/images/photos/grass-courts-1.jpg';
 import ExpandableImage from '@/app/_components/ExpandableImage';
 
@@ -9,9 +8,9 @@ export default function ClubHire() {
             <h1>Club hire</h1>
             <h2>Perfect for private events, work parties, or festive celebrations</h2>
             <section className="flex flex-wrap flex-row justify-center items-center">
-                <ExpandableImage thumb={grassCourt1Thumb} full={grassCourt1} alt="'Grass court photo 1'" />
-                <ExpandableImage thumb={grassCourt1Thumb} full={grassCourt1} alt="'Grass court photo 1'" />
-                <ExpandableImage thumb={grassCourt1Thumb} full={grassCourt1} alt="'Grass court photo 1'" />
+                <ExpandableImage thumb={grassCourt1} full={grassCourt1} alt="'Grass court photo 1'" />
+                <ExpandableImage thumb={grassCourt1} full={grassCourt1} alt="'Grass court photo 1'" />
+                <ExpandableImage thumb={grassCourt1} full={grassCourt1} alt="'Grass court photo 1'" />
             </section>
             <section>
                 <h3>Call now to organise a booking</h3>
@@ -44,11 +43,7 @@ export default function ClubHire() {
                 </ul>
                 <h3>Drinks and bar snacks prices</h3>
                 <div className="flex flex-wrap flex-row justify-center items-center">
-                    <ExpandableImage
-                        thumb={grassCourt1Thumb}
-                        full={grassCourt1}
-                        alt="'Grass court photo 1'"
-                    />
+                    <ExpandableImage thumb={grassCourt1} full={grassCourt1} alt="'Grass court photo 1'" />
                 </div>
             </section>
             <section>

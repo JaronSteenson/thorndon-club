@@ -5,7 +5,7 @@ import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
 import externalLinkIcon from '@/public/images/icons/external-link.svg';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const mainPageRoutes = {
     Squash: 'squash',
@@ -21,6 +21,8 @@ const mainPageLinkProps = toRouteProps(mainPageRoutes);
 export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen((menuOpen) => !menuOpen);
+    const closeMenu = () => setMenuOpen(false);
+
     return (
         <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
             <nav className="w-full">
@@ -30,6 +32,7 @@ export default function NavBar() {
                             <Link
                                 className="text-xl font-semibold items-center justify-between gap-2"
                                 href="/"
+                                onClick={closeMenu}
                             >
                                 Thorndon Club
                             </Link>
@@ -37,7 +40,7 @@ export default function NavBar() {
                         <div className="flex justify-between flex-wrap gap-3">
                             <div className="flex items-center justify-end gap-10">
                                 <span className="hidden sm:hidden md:hidden lg:flex xl:flex items-center justify-end gap-10">
-                                    <Links mainPageLinkProps={mainPageLinkProps} />
+                                    <Links onItemClick={closeMenu} mainPageLinkProps={mainPageLinkProps} />
                                 </span>
                             </div>
                             <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
@@ -46,7 +49,7 @@ export default function NavBar() {
                 </div>
                 {menuOpen && (
                     <div className="m-0 p-6 gap-6 flex sm:flex md:fle lg:hidden xl:hiddenx flex-col w-full text-center">
-                        <Links mainPageLinkProps={mainPageLinkProps} />
+                        <Links onItemClick={closeMenu} mainPageLinkProps={mainPageLinkProps} />
                     </div>
                 )}
             </nav>
@@ -120,11 +123,17 @@ function toRouteProps(pages: Record<string, string>): LinkProps[] {
     });
 }
 
-function Links({ mainPageLinkProps }: { mainPageLinkProps: LinkProps[] }) {
+function Links({
+    onItemClick,
+    mainPageLinkProps,
+}: {
+    onItemClick: () => void;
+    mainPageLinkProps: LinkProps[];
+}) {
     return (
         <>
             {mainPageLinkProps.map(({ href, children }) => (
-                <Link key={href} className="text-md font-medium md:py-1" href={href}>
+                <Link key={href} className="text-md font-medium md:py-1" href={href} onClick={onItemClick}>
                     {children}
                 </Link>
             ))}
