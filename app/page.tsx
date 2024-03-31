@@ -10,7 +10,7 @@ import logo from '@/public/images/logos/thorndon-club-logo-200x200.png';
 export default function Home() {
     return (
         <>
-            <section className="card">
+            <section className="card-double">
                 <Image className="bg-white rounded p-1" src={logo} width={200} height={200} alt="logo" />
                 <p className="text-xl text-center px-6">
                     Tennis, Squash and more just a stones throw from the Wellington cbd.
@@ -27,7 +27,7 @@ export default function Home() {
                     <FacebookIframe height={400} />
                 </section>
             </div>
-            <section className="form-card">
+            <section className="card-double">
                 <h2>Keep in the loop</h2>
                 <MailchimpSubscribeForm />
             </section>

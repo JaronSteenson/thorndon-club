@@ -17,16 +17,16 @@ export default function ContactUs() {
                 <TennisCaptainContactCard />
             </section>
             <div className="flex flex-wrap gap-12 items-start justify-center">
-                <section className="card iframe-card">
+                <section className="iframe-card">
                     <h2>Find us</h2>
                     <GoogleMapIframe height={300} />
                 </section>
-                <section className="card">
+                <section className="iframe-card">
                     <h2>Follow us</h2>
                     <FacebookIframe height={300} />
                 </section>
             </div>
-            <section className="card">
+            <section className="card-double">
                 <h2>Report an accident or submit a complaint</h2>
                 <p className="bg-blue-200 p-3 rounded">
                     Please note accidents should be reported within 24 hours.
