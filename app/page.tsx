@@ -5,14 +5,14 @@ import LandingPageImages from '@/app/_components/LandingPageImages';
 import FacebookIframe from '@/app/_components/FacebookIframe';
 import GoogleMapIframe from '@/app/_components/GoogleMapIFrame';
 import Image from 'next/image';
-import logoSmall from '@/public/images/logos/thorndon-club-logo.png';
+import logo from '@/public/images/logos/thorndon-club-logo-200x200.png';
 
 export default function Home() {
     return (
         <>
             <section className="card">
-                <Image className="bg-white rounded p-1" src={logoSmall} height={200} alt="logo" />
-                <p className="text-xl px-6">
+                <Image className="bg-white rounded p-1" src={logo} width={200} height={200} alt="logo" />
+                <p className="text-xl text-center px-6">
                     Tennis, Squash and more just a stones throw from the Wellington cbd.
                 </p>
                 <JoinNowButton />.
