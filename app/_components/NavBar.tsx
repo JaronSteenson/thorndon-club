@@ -3,7 +3,6 @@
 import { helloClubUrl, merchStoreLink } from '@/app/globals';
 import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
 import externalLinkIcon from '@/public/images/icons/external-link.svg';
-import navBarLogo from '@/public/images/logos/nav-bar-logo-70x337.png';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -25,15 +24,14 @@ export default function NavBar() {
     return (
         <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
             <nav className="w-full">
-                <div className="items-center md:flex md:flex-col md:items-start md:justify-between p-3 w-full">
+                <div className="items-center md:flex md:flex-col md:items-start md:justify-between w-full p-6">
                     <div className="flex items-center justify-between flex-wrap h-full w-full">
                         <div className="flex items-center gap-6">
                             <Link
-                                className="text-xl font-semibold uppercase flex items-center justify-between gap-2"
+                                className="text-xl font-semibold items-center justify-between gap-2"
                                 href="/"
-                                aria-label="Site name"
                             >
-                                <Image src={navBarLogo} height={50} alt="logo" />
+                                Thorndon Club
                             </Link>
                         </div>
                         <div className="flex justify-between flex-wrap gap-3">
@@ -126,11 +124,11 @@ function Links({ mainPageLinkProps }: { mainPageLinkProps: LinkProps[] }) {
     return (
         <>
             {mainPageLinkProps.map(({ href, children }) => (
-                <Link key={href} className="font-medium md:py-1" href={href}>
+                <Link key={href} className="text-md font-medium md:py-1" href={href}>
                     {children}
                 </Link>
             ))}
-            <a className="font-medium md:py-1" rel="noopener" href={merchStoreLink}>
+            <a className="text-md font-medium md:py-1" rel="noopener" href={merchStoreLink}>
                 <Image
                     className="inline pr-1 pb-0.5"
                     src={externalLinkIcon}
@@ -139,7 +137,7 @@ function Links({ mainPageLinkProps }: { mainPageLinkProps: LinkProps[] }) {
                 />
                 Uniforms
             </a>
-            <a className="button-secondary" rel="noopener" href={helloClubUrl}>
+            <a className="button-secondary text-md" rel="noopener" href={helloClubUrl}>
                 <Image className="inline pr-2" src={helloClubLogo} height="24" alt="Hello Club logo" />
                 Book a court
             </a>

@@ -4,19 +4,18 @@ import JoinNowButton from '@/app/_components/JoinNowButton';
 import LandingPageImages from '@/app/_components/LandingPageImages';
 import FacebookIframe from '@/app/_components/FacebookIframe';
 import GoogleMapIframe from '@/app/_components/GoogleMapIFrame';
+import Image from 'next/image';
+import logoSmall from '@/public/images/logos/thorndon-club-logo.png';
 
 export default function Home() {
     return (
         <>
-            <section className="text-center flex items-center">
-                <h1>Something for everyone</h1>
-                <p className="text-xl">
-                    With four squash courts, three astroturf tennis courts,
-                    <br /> two grass courts, two bars and a sauna,
-                    <br /> we have something for everyone.
+            <section className="card">
+                <Image className="bg-white rounded p-1" src={logoSmall} height={200} alt="logo" />
+                <p className="text-xl px-6">
+                    Tennis, Squash and more just a stones throw from the Wellington cbd.
                 </p>
                 <JoinNowButton />.
-                <LandingPageImages />
             </section>
             <div className="flex flex-wrap gap-12 items-start justify-center">
                 <section className="iframe-card">
