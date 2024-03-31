@@ -1,5 +1,3 @@
-import { joinNowUrl } from '@/app/globals';
-import clubManagerAvatar from '@/public/images/avatars/club-manager-avatar-60x60.avif';
 import Image from 'next/image';
 
 interface Props {
@@ -13,7 +11,7 @@ interface Props {
 export default function ContactCard({ name, role, phone, email, avatar }: Props) {
     return (
         <>
-            <div className="card p-3">
+            <div className="contact-card p-3">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                     <AvatarImage name={name} role={role} avatar={avatar} />
                     <TitleSection name={name} role={role} />

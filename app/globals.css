@@ -3,9 +3,6 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
 }
 
 body {
@@ -15,6 +12,7 @@ body {
 
 .navbar {
     @apply rounded;
+    background: white;
     box-shadow: 0 1px 2px 1px lightgray;
     width: 100%;
 }
@@ -23,6 +21,14 @@ body {
     @apply rounded;
     box-shadow: 0 1px 2px 1px lightgray;
     width: fit-content;
+    min-width: 24rem;
+}
+
+.contact-card {
+    @apply rounded;
+    box-shadow: 0 1px 2px 1px lightgray;
+    width: fit-content;
+    min-width: 16rem;
 }
 
 .contact-cards {
@@ -45,7 +51,7 @@ body {
         @apply text-gray-500;
     }
     section {
-        @apply flex flex-col justify-around gap-6;
+        @apply flex flex-col justify-around gap-3;
     }
 
     /* Buttons  */
@@ -72,7 +78,7 @@ body {
     [type='radio']:checked::before,
     [type='checkbox']:checked::before {
         content: '';
-        @apply flex bg-primary-300 w-full h-full;
+        @apply flex bg-primary-500 w-full h-full;
         position: relative;
     }
 

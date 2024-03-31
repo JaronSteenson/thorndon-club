@@ -2,6 +2,7 @@
 
 import { helloClubUrl, merchStoreLink } from '@/app/globals';
 import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
+import externalLinkIcon from '@/public/images/icons/external-link.svg';
 import navBarLogo from '@/public/images/logos/nav-bar-logo-70x337.png';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -40,16 +41,6 @@ export default function NavBar() {
                                 <span className="hidden sm:hidden md:hidden lg:flex xl:flex items-center justify-end gap-10">
                                     <Links mainPageLinkProps={mainPageLinkProps} />
                                 </span>
-                                <a className="button-secondary" href={helloClubUrl}>
-                                    <Image
-                                        className="inline sm:pr-2"
-                                        src={helloClubLogo}
-                                        height="24"
-                                        alt="Hello Club logo"
-                                    />
-
-                                    <span className="hidden sm:inline">Book a court</span>
-                                </a>
                             </div>
                             <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
                         </div>
@@ -142,7 +133,17 @@ function Links({ mainPageLinkProps }: { mainPageLinkProps: LinkProps[] }) {
                 </Link>
             ))}
             <a className="font-medium md:py-1" rel="noopener" href={merchStoreLink}>
+                <Image
+                    className="inline pr-1 pb-0.5"
+                    src={externalLinkIcon}
+                    height="24"
+                    alt="External link"
+                />
                 Uniforms
+            </a>
+            <a className="button-secondary" rel="noopener" href={helloClubUrl}>
+                <Image className="inline pr-2" src={helloClubLogo} height="24" alt="Hello Club logo" />
+                Book a court
             </a>
         </>
     );

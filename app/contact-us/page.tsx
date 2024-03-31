@@ -4,7 +4,9 @@ import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerCo
 import TennisCaptainContactCard from '@/app/_components/ContactCards/TennisCaptainContactCard';
 import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCaptainContactCard';
 import PresidentContactCard from '@/app/_components/ContactCards/PresidentContactCard';
-import { merchStoreLink } from '@/app/globals';
+import GoogleMapIframe from '@/app/_components/GoogleMapIFrame';
+import MailchimpSubscribeForm from '@/app/_components/MailchimpSubscribeForm';
+import FacebookIframe from '@/app/_components/FacebookIframe';
 
 export default function ContactUs() {
     return (
@@ -23,20 +25,16 @@ export default function ContactUs() {
                     <TennisCaptainContactCard />
                 </div>
             </section>
-            <section>
-                <h3>Socials</h3>
-                <a href="https://www.facebook.com/thorndonclub">www.facebook.com/thorndonclub/</a>
-            </section>
-            <section>
-                <h3>Club address</h3>
-                <a href="https://www.google.com/maps/@-41.273033,174.779612,19z">
-                    4 Katherine Ave, Thorndon, Wellington 6011
-                </a>
-            </section>
-            <section>
-                <h3>Club uniforms</h3>
-                <a href={merchStoreLink}>{merchStoreLink}</a>
-            </section>
+            <div className="flex flex-wrap gap-2 items-start justify-center">
+                <section className="card m-12 p-6 w-96">
+                    <h2>Find us</h2>
+                    <GoogleMapIframe height={300} />
+                </section>
+                <section className="card m-12 p-6 w-96">
+                    <h2>Follow us</h2>
+                    <FacebookIframe height={300} />
+                </section>
+            </div>
             <section>
                 <h2>Report an accident or submit a complaint</h2>
                 <p className="bg-blue-200 p-3 rounded">

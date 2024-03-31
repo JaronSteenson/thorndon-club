@@ -5,6 +5,7 @@ import { DetailedHTMLProps, InputHTMLAttributes, ReactNode } from 'react';
 export default function MobileLaMailchimpSubscribeForm() {
     return (
         <>
+            <h3 className="text-xs">Subscribe to our mailing list</h3>
             <form
                 className="flex flex-col flex-wrap gap-6 w-full"
                 action="https://thorndonclub.us7.list-manage.com/subscribe/post?u=d6baf37078f25e832e9c4f904&id=208a4ee0e4"

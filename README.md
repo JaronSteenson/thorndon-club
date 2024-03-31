@@ -27,8 +27,8 @@ thorndon-test-site-deploy() {
 5. sponsor wall ✅
 6. have rough crack at landing page/calls to action ✅
 7. get layout/colours/content ok secondary pages ⬜
-8. test manual deploy on subdirectory ⬜
-9. set action/CD for deploy to subdirectory ⬜
+8. test manual deploy on github pages ✅
+9. set action/CD for dummy deploy ⬜
 10. add force build/deploy manual action ⬜
 11. fix readme ⬜
 12. fix up landing page design and content ⬜

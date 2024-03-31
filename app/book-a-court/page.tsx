@@ -1,6 +1,7 @@
 import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
 import Image from 'next/image';
 import { helloClubUrl } from '@/app/globals';
+import externalLinkIcon from '@/public/images/icons/external-link.svg';
 
 /**
  * This just exist for Google to scrape,
@@ -12,11 +13,19 @@ import { helloClubUrl } from '@/app/globals';
 export default function BookACourt() {
     return (
         <a
-            className="flex items-center gap-x-2 font-medium text-gray-500 hover:text-primary-600 md:border-s md:border-gray-300 md:my-6 md:ps-6 dark:border-gray-700 dark:text-gray-400 dark:hover:text-primary-500"
+            className="flex flex-wrap justify-center items-center flex-col gap-4 text-xl text-gray-500 hover:text-primary-600"
             href={helloClubUrl}
         >
-            <Image src={helloClubLogo} width="24" height="24" alt="Hello Club login" />
-            Take me to Hello Club to book a court
+            <Image src={helloClubLogo} height="150" alt="Hello Club login" />
+            <div>
+                <Image
+                    className="inline pr-1 pb-0.5"
+                    src={externalLinkIcon}
+                    height="24"
+                    alt="External link"
+                />
+                Book a court on Hello Club
+            </div>
         </a>
     );
 }
