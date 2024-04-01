@@ -20,7 +20,7 @@ export default function Home() {
                 </p>
                 <div className="flex justify-center gap-6 flex-wrap">
                     <JoinNowButton />
-                    <Link className="button-secondary w-48" href="memberships">
+                    <Link className="button-neutral w-48" href="memberships">
                         View memberships
                     </Link>
                 </div>

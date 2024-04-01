@@ -8,7 +8,7 @@
 }
 
 body {
-    @apply text-secondary-600 bg-white;
+    @apply text-neutral-600 bg-white;
 }
 
 main {
@@ -17,6 +17,7 @@ main {
 
 main:has(.sponsors-sections) {
     @apply pb-0;
+    background: linear-gradient(180deg, white 0%, white 33%, lightgray 50%);
 }
 
 .elevation {
@@ -31,7 +32,10 @@ nav {
 .slide-show {
     @apply w-full rounded;
     max-width: 100vw;
-    @media (min-width: 1200px) {
+}
+
+@media (min-width: 1200px) {
+    .slide-show {
         max-width: 1200px;
     }
 }
@@ -42,7 +46,10 @@ nav {
 
 .react-slideshow-container .nav:first-of-type {
     left: 15px;
-    @media (min-width: 1400px) {
+}
+
+@media (min-width: 1400px) {
+    .react-slideshow-container .nav:first-of-type {
         left: -65px;
         width: 60px;
         height: 60px;
@@ -51,7 +58,10 @@ nav {
 
 .react-slideshow-container .nav:last-of-type {
     right: 15px;
-    @media (min-width: 1400px) {
+}
+
+@media (min-width: 1400px) {
+    .react-slideshow-container .nav:last-of-type {
         right: -65px;
         width: 60px;
         height: 60px;
@@ -68,7 +78,10 @@ nav {
 .iframe-card {
     @apply card;
     width: 100vw;
-    @media (min-width: 400px) {
+}
+
+@media (min-width: 400px) {
+    .iframe-card {
         width: 400px;
     }
 }
@@ -76,7 +89,10 @@ nav {
 .overview-card {
     @apply card;
     width: 100vw;
-    @media (min-width: 300px) {
+}
+
+@media (min-width: 300px) {
+    .overview-card {
         width: 350px;
     }
 }
@@ -84,7 +100,10 @@ nav {
 .card-double {
     @apply card;
     width: 100vw;
-    @media (min-width: calc(400px + 400px + 3rem)) {
+}
+
+@media (min-width: calc(400px + 400px + 3rem)) {
+    .card-double {
         width: calc(400px + 400px + 3rem);
     }
 }
@@ -134,8 +153,8 @@ nav {
         @apply bg-primary-500 hover:bg-primary-700 text-white font-bold py-2 px-2 rounded text-center;
     }
 
-    .button-secondary {
-        @apply bg-secondary-200 hover:bg-secondary-300 text-gray-500 font-bold py-2 px-2 rounded text-center;
+    .button-neutral {
+        @apply bg-neutral-200 hover:bg-neutral-300 text-gray-500 font-bold py-2 px-2 rounded text-center;
     }
 
     /* Radios and checkboxes */

@@ -146,7 +146,7 @@ function Links({
                 />
                 Uniforms
             </a>
-            <a className="button-secondary text-md" rel="noopener" href={helloClubUrl}>
+            <a className="button-neutral text-md" rel="noopener" href={helloClubUrl}>
                 <Image className="inline pr-2" src={helloClubLogo} height="24" alt="Hello Club logo" />
                 Book a court
             </a>
