@@ -1,46 +1,38 @@
-import Image from 'next/image';
-import 'photoswipe/dist/photoswipe.css';
 import squashCourt from '@/public/images/photos/squash-glass-court-1-1200x900.jpg';
 import grassCourts from '@/public/images/photos/grass-courts-1-1200x900.jpg';
 import hardCourt from '@/public/images/photos/tennis-courts-1-1200x900.jpg';
 import astroCourts from '@/public/images/photos/tennis-courts-2-1200x900.jpg';
 import loungeInside from '@/public/images/photos/lounge-1-1200x900.jpg';
-import { Fade } from 'react-slideshow-image';
+import sauna from '@/public/images/photos/sauna-1-1200x900.jpg';
+import SlideShow from '@/app/_components/SlideShow';
 
 const slides = [
     {
         image: hardCourt,
-        caption: 'Home to three recently re-turfed tennis courts',
+        caption: '2x turfs courts, 1x hardcourt',
     },
     {
         image: squashCourt,
-        caption: 'Home to four glass front squash courts',
+        caption: '4x glass front squash courts',
     },
     {
         image: grassCourts,
-        caption: 'Home to two grass tennis courts',
+        caption: '2x grass courts',
     },
     {
         image: astroCourts,
-        caption: 'Home to three recently re-turfed tennis courts',
+        caption: '2x AstroTurfs, 1x hard court',
     },
     {
         image: loungeInside,
-        caption: 'Home to The Kathleen Nunneley Lounge',
+        caption: 'Bar',
+    },
+    {
+        image: sauna,
+        caption: 'Sauna',
     },
 ];
 
 export default function HomePageSlideShow() {
-    return (
-        <div className="slide-show">
-            <Fade indicators>
-                {slides.map((slide, index) => (
-                    <figure key={index}>
-                        <Image className="slide-show-image" src={slide.image} alt={slide.caption} />
-                        <figcaption className="text-xl text-center pt-6">{slide.caption}</figcaption>
-                    </figure>
-                ))}
-            </Fade>
-        </div>
-    );
+    return <SlideShow slides={slides} />;
 }

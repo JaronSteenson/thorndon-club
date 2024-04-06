@@ -1,5 +1,3 @@
-'use client';
-
 import { DetailedHTMLProps, InputHTMLAttributes, ReactNode } from 'react';
 
 export default function MobileLaMailchimpSubscribeForm() {

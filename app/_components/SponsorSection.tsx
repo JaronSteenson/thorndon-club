@@ -20,7 +20,7 @@ export default function SponsorSection() {
     return (
         <div className="sponsors-sections">
             <section className="pt-6">
-                <h2 className="text-4xl text-neutral-700">Our sponsors</h2>
+                <h2 className="text-4xl">Our sponsors</h2>
                 <Row>
                     <ImageLink
                         className="rounded"
@@ -44,6 +44,7 @@ export default function SponsorSection() {
                         alt="DataCraft logo"
                     />
                     <ImageLink
+                        className="bg-white p-3 rounded"
                         href="https://www.newworld.co.nz/lower-north-island/wellington/thorndon"
                         src={newWorldLogo}
                         alt="New World Thorndon logo"
@@ -55,11 +56,13 @@ export default function SponsorSection() {
                         alt="Levco logo"
                     />
                     <ImageLink
+                        className="bg-white p-3 rounded"
                         href="https://www.graleyplastics.co.nz/"
                         src={grayleyPlasticsLogo}
                         alt="Grayley Plastics logo"
                     />
                     <ImageLink
+                        className="bg-white p-3 rounded"
                         href="https://sullivanconsulting.co.nz/"
                         src={sullivanConsultingLogo}
                         alt="Sullivan Consulting logo"
@@ -67,7 +70,7 @@ export default function SponsorSection() {
                 </Row>
             </section>
             <section className="pt-24">
-                <h2 className="text-4xl text-neutral-700">Our funders</h2>
+                <h2 className="text-4xl">Our funders</h2>
                 <Row>
                     <ImageLink
                         href="https://www.pelorustrust.net.nz/"

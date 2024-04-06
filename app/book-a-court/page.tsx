@@ -13,7 +13,7 @@ import externalLinkIcon from '@/public/images/icons/external-link.svg';
 export default function BookACourt() {
     return (
         <a
-            className="flex flex-wrap justify-center items-center flex-col gap-4 text-lg text-gray-500 hover:text-primary-600"
+            className="flex flex-wrap justify-center items-center flex-col gap-4 text-lg mt-12"
             href={helloClubUrl}
         >
             <Image src={helloClubLogo} height="150" alt="Hello Club login" />

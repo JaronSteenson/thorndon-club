@@ -10,7 +10,8 @@ const config: Config = {
     theme: {
         extend: {
             colors: {
-                primary: colors.green,
+                primary: '#64bb46',
+                link: '#468430',
                 secondary: colors.purple,
                 neutral: colors.gray,
             },

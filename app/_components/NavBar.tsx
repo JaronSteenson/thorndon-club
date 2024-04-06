@@ -5,7 +5,7 @@ import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
 import externalLinkIcon from '@/public/images/icons/external-link.svg';
 import Link from 'next/link';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 const mainPageRoutes = {
     Squash: 'squash',
@@ -15,32 +15,30 @@ const mainPageRoutes = {
     'Contact us': 'contact-us',
 };
 
-// @ts-ignore
-const mainPageLinkProps = toRouteProps(mainPageRoutes);
-
 export default function NavBar() {
     const [menuOpen, setMenuOpen] = useState(false);
     const toggleMenu = () => setMenuOpen((menuOpen) => !menuOpen);
     const closeMenu = () => setMenuOpen(false);
 
     return (
-        <header className="flex flex-wrap md:justify-start md:flex-nowrap z-50 w-full text-sm">
-            <nav className="w-full">
+        <header>
+            <nav className="navBar">
                 <div className="items-center md:flex md:flex-col md:items-start md:justify-between w-full p-6">
                     <div className="flex items-center justify-between flex-wrap h-full w-full">
                         <div className="flex items-center gap-6">
                             <Link
-                                className="text-xl font-semibold items-center justify-between gap-2"
+                                className="text-xl text-black font-semibold text-center uppercase items-center justify-between gap-2"
                                 href="/"
                                 onClick={closeMenu}
                             >
-                                Thorndon Club
+                                <div>Thorndon</div>
+                                <div className="text-sm">Tennis and Squash Club</div>
                             </Link>
                         </div>
                         <div className="flex justify-between flex-wrap gap-3">
-                            <div className="flex items-center justify-end gap-10">
-                                <span className="hidden sm:hidden md:hidden lg:flex xl:flex items-center justify-end gap-10">
-                                    <Links onItemClick={closeMenu} mainPageLinkProps={mainPageLinkProps} />
+                            <div className="flex items-center justify-end gap-3">
+                                <span className="hidden sm:hidden md:hidden lg:flex xl:flex items-center justify-end gap-4 xs:gap-4 sm:gap-6 md:gap-6 lg:gap-6 xl:gap-12">
+                                    <Links onItemClick={closeMenu} />
                                 </span>
                             </div>
                             <MobileLauncher onClick={toggleMenu} menuOpen={menuOpen} />
@@ -48,8 +46,8 @@ export default function NavBar() {
                     </div>
                 </div>
                 {menuOpen && (
-                    <div className="m-0 p-6 gap-6 flex sm:flex md:fle lg:hidden xl:hiddenx flex-col w-full text-center">
-                        <Links onItemClick={closeMenu} mainPageLinkProps={mainPageLinkProps} />
+                    <div className="m-0 p-6 gap-6 flex sm:flex md:flex lg:hidden xl:hiddenx flex-col w-full text-center">
+                        <Links onItemClick={closeMenu} />
                     </div>
                 )}
             </nav>
@@ -62,20 +60,20 @@ interface MobileLauncherProps {
     menuOpen: boolean;
 }
 
-function MobileLauncher(props: MobileLauncherProps) {
+function MobileLauncher({ menuOpen, onClick }: MobileLauncherProps) {
     return (
         <button
-            onClick={props.onClick}
+            onClick={onClick}
             type="button"
             className="w-8 h-8 flex sm:flex md:fle lg:hidden xl:hiddenx justify-center items-center"
             aria-label="Toggle navigation"
         >
-            {!props.menuOpen && (
+            {!menuOpen && (
                 <svg
                     className="flex-shrink-0 w-4 h-4"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -88,12 +86,12 @@ function MobileLauncher(props: MobileLauncherProps) {
                     <line x1="3" x2="21" y1="18" y2="18" />
                 </svg>
             )}
-            {props.menuOpen && (
+            {menuOpen && (
                 <svg
                     className="hs-collapse-open:block flex-shrink-0 w-4 h-4"
                     xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
+                    width="32"
+                    height="32"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"
@@ -109,30 +107,10 @@ function MobileLauncher(props: MobileLauncherProps) {
     );
 }
 
-interface LinkProps {
-    href: string;
-    children: string;
-}
-
-function toRouteProps(pages: Record<string, string>): LinkProps[] {
-    return Object.entries(pages).map(([children, href]) => {
-        return {
-            href,
-            children,
-        };
-    });
-}
-
-function Links({
-    onItemClick,
-    mainPageLinkProps,
-}: {
-    onItemClick: () => void;
-    mainPageLinkProps: LinkProps[];
-}) {
+function Links({ onItemClick }: { onItemClick: () => void }) {
     return (
         <>
-            {mainPageLinkProps.map(({ href, children }) => (
+            {Object.entries(mainPageRoutes).map(([children, href]) => (
                 <Link key={href} className="text-md font-medium md:py-1" href={href} onClick={onItemClick}>
                     {children}
                 </Link>

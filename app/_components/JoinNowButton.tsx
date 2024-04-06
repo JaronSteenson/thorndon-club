@@ -1,9 +1,9 @@
-import { joinNowUrl } from '@/app/globals';
+import Link from 'next/link';
 
 export default function JoinNowButton() {
     return (
-        <a className="button-primary w-48" href={joinNowUrl} rel="noopener">
+        <Link className="button-primary w-48" href="/memberships" rel="noopener">
             Join now
-        </a>
+        </Link>
     );
 }

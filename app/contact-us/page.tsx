@@ -6,6 +6,7 @@ import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCapta
 import PresidentContactCard from '@/app/_components/ContactCards/PresidentContactCard';
 import GoogleMapIframe from '@/app/_components/GoogleMapIFrame';
 import FacebookIframe from '@/app/_components/FacebookIframe';
+import EmbeddedContactSections from '@/app/_components/EmbeddedContactSections';
 
 export default function ContactUs() {
     return (
@@ -16,17 +17,7 @@ export default function ContactUs() {
                 <SquashCaptainContactCard />
                 <TennisCaptainContactCard />
             </section>
-            <div className="flex flex-wrap gap-12 items-start justify-center">
-                <section className="iframe-card">
-                    <h2>Find us</h2>
-                    <GoogleMapIframe height={300} />
-                </section>
-                <section className="iframe-card">
-                    <h2>Follow us</h2>
-                    <FacebookIframe height={300} />
-                </section>
-            </div>
-            <section className="card-double">
+            <section>
                 <h2>Report an accident or submit a complaint</h2>
                 <p className="bg-blue-200 p-3 rounded">
                     Please note accidents should be reported within 24 hours.
@@ -36,6 +27,7 @@ export default function ContactUs() {
                     <ComplaintEmailLink />
                 </div>
             </section>
+            <EmbeddedContactSections />
         </>
     );
 }
