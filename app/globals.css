@@ -38,15 +38,23 @@
         max-width: 100vw;
     }
 
+    .slide-show-image {
+        @apply bg-neutral-800;
+    }
+
     @media (min-width: 1200px) {
         .slide-show {
             @apply rounded;
-            max-width: 1200px;
+            max-width: 100vh;
+        }
+
+        .slide-show-image {
+            @apply rounded;
         }
     }
 
-    .slide-show-image {
-        @apply rounded bg-neutral-800;
+    .react-slideshow-container + ul.indicators {
+        max-width: 100%;
     }
 
     .react-slideshow-container .nav:first-of-type {
@@ -143,6 +151,11 @@
     }
     section {
         @apply flex flex-col justify-around gap-3;
+    }
+    p,
+    ul,
+    ol {
+        @apply m-3 max-w-prose;
     }
 
     /* Buttons  */

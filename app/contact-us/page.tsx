@@ -17,7 +17,7 @@ export default function ContactUs() {
                 <SquashCaptainContactCard />
                 <TennisCaptainContactCard />
             </section>
-            <section>
+            <section className="mx-6">
                 <h2>Report an accident or submit a complaint</h2>
                 <p className="bg-blue-200 p-3 rounded">
                     Please note accidents should be reported within 24 hours.
