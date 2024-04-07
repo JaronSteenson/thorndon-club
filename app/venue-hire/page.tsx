@@ -1,5 +1,5 @@
 import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerContactCard';
-import ClubHirePageSlideShow from '@/app/club-hire/ClubHirePageSlideShow';
+import VenueHirePageSlideShow from '@/app/venue-hire/VenueHirePageSlideShow';
 
 export default function ClubHire() {
     return (
@@ -11,7 +11,7 @@ export default function ClubHire() {
                     <br />
                     work parties, or festive celebrations 🎉
                 </h2>
-                <ClubHirePageSlideShow />
+                <VenueHirePageSlideShow />
             </section>
             <section>
                 <h2>Bar use</h2>

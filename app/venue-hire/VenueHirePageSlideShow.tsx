@@ -48,6 +48,6 @@ const slides = [
     },
 ];
 
-export default function ClubHirePageSlideShow() {
+export default function VenueHirePageSlideShow() {
     return <SlideShow slides={slides} />;
 }

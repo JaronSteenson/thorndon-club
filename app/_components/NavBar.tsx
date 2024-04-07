@@ -10,7 +10,7 @@ import { useState } from 'react';
 const mainPageRoutes = {
     Tennis: 'tennis',
     Squash: 'squash',
-    'Venue hire': 'club-hire',
+    'Venue hire': 'venue-hire',
     Memberships: 'memberships',
     'Contact us': 'contact-us',
 };
