@@ -5,7 +5,7 @@ export default function ClubHire() {
     return (
         <>
             <section>
-                <h1>Club hire</h1>
+                <h1>Venue hire</h1>
                 <h2 className="text-link text-center my-3">
                     Perfect for private events,
                     <br />

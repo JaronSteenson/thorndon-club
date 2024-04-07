@@ -156,6 +156,17 @@
         @apply max-w-prose m-3;
     }
 
+    table {
+        @apply text-sm;
+        @media (min-width: 600px) {
+            font-size: 1rem;
+        }
+        @media (min-width: 1200px) {
+            /* Same as max-w-prose */
+            width: 1200px;
+        }
+    }
+
     section:has(p, ul, ol) {
         @media (min-width: 65ch) {
             /* Same as max-w-prose */

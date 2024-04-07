@@ -10,7 +10,7 @@ import { useState } from 'react';
 const mainPageRoutes = {
     Tennis: 'tennis',
     Squash: 'squash',
-    'Club hire': 'club-hire',
+    'Venue hire': 'club-hire',
     Memberships: 'memberships',
     'Contact us': 'contact-us',
 };
@@ -46,7 +46,7 @@ export default function NavBar() {
                     </div>
                 </div>
                 {menuOpen && (
-                    <div className="m-0 p-6 gap-6 flex sm:flex md:flex lg:hidden xl:hiddenx flex-col w-full text-center">
+                    <div className="m-0 p-6 pt-0 gap-6 flex sm:flex md:flex lg:hidden xl:hiddenx flex-col w-full text-center">
                         <Links onItemClick={closeMenu} />
                     </div>
                 )}
