@@ -15,7 +15,7 @@ export default function EmbeddedContactSections() {
                     <FacebookIframe height={400} />
                 </section>
             </div>
-            <section className="card-double">
+            <section id="mailing-list-subscribe" className="card-double">
                 <h2>Keep in the loop</h2>
                 <MailchimpSubscribeForm />
             </section>

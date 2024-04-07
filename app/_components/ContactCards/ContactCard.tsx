@@ -1,16 +1,18 @@
 import Image from 'next/image';
 
 interface Props {
+    id: string;
     name: string;
     role: string;
     phone: string;
     email: string;
     avatar?: any;
+    center: boolean;
 }
 
-export default function ContactCard({ name, role, phone, email, avatar }: Props) {
+export default function ContactCard({ id, name, role, phone, email, avatar, center = false }: Props) {
     return (
-        <>
+        <div id={id} className={center ? 'flex flex-row justify-center' : ''}>
             <div className="contact-card">
                 <div className="flex flex-wrap items-center justify-between gap-4">
                     <AvatarImage name={name} role={role} avatar={avatar} />
@@ -22,7 +24,7 @@ export default function ContactCard({ name, role, phone, email, avatar }: Props)
                     <a href={`mailto:${email}`}>{email}</a>
                 </div>
             </div>
-        </>
+        </div>
     );
 }
 

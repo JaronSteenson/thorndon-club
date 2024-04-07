@@ -10,7 +10,7 @@
     }
 
     main {
-        @apply bg-white flex min-h-screen flex-col items-center pt-6 pb-12 gap-12;
+        @apply bg-white flex min-h-screen flex-col items-center pt-6 pb-64 gap-12;
     }
 
     main:has(.sponsors-sections) {
@@ -206,11 +206,14 @@
     ul {
         list-style-type: square;
     }
+    ol {
+        list-style-type: decimal;
+    }
     li {
         @apply ml-6;
     }
     li::marker {
-        @apply text-primary;
+        @apply text-link;
     }
 
     /* Tables */
