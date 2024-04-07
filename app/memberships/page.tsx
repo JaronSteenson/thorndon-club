@@ -4,6 +4,7 @@ import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerCo
 export default function Memberships() {
     return (
         <>
+            <h1>Memberships</h1>
             <section>
                 <h2>Pricing guide</h2>
                 <table>
