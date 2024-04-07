@@ -20,7 +20,7 @@ export default function SponsorSection() {
     return (
         <div className="sponsors-sections">
             <section className="pt-6">
-                <h2 className="text-4xl">Our sponsors</h2>
+                <h2 className="text-4xl pb-6">Our sponsors</h2>
                 <Row>
                     <ImageLink
                         className="rounded"
@@ -70,7 +70,7 @@ export default function SponsorSection() {
                 </Row>
             </section>
             <section className="pt-24">
-                <h2 className="text-4xl">Our funders</h2>
+                <h2 className="text-4xl pb-6">Our funders</h2>
                 <Row>
                     <ImageLink
                         href="https://www.pelorustrust.net.nz/"
@@ -122,7 +122,7 @@ interface RowProps {
 }
 
 function Row({ children }: RowProps) {
-    return <div className="flex flex-wrap justify-center items-center gap-6">{children}</div>;
+    return <div className="flex flex-wrap justify-center items-center gap-6 mx-6">{children}</div>;
 }
 
 interface ImageLinkProps {

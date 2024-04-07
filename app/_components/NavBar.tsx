@@ -22,7 +22,7 @@ export default function NavBar() {
 
     return (
         <header>
-            <nav className="navBar">
+            <nav className="nav-bar">
                 <div className="items-center md:flex md:flex-col md:items-start md:justify-between w-full p-6">
                     <div className="flex items-center justify-between flex-wrap h-full w-full">
                         <div className="flex items-center gap-6">

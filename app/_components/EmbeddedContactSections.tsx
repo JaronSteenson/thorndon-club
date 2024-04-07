@@ -8,11 +8,11 @@ export default function EmbeddedContactSections() {
             <div className="flex flex-wrap gap-12 items-start justify-center">
                 <section className="iframe-card">
                     <h2>Find us</h2>
-                    <GoogleMapIframe height={400} />
+                    <GoogleMapIframe />
                 </section>
                 <section className="iframe-card">
                     <h2>Follow us</h2>
-                    <FacebookIframe height={400} />
+                    <FacebookIframe />
                 </section>
             </div>
             <section id="mailing-list-subscribe" className="card-double">
