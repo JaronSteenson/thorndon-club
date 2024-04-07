@@ -141,8 +141,7 @@
         @apply text-2xl text-center font-semibold text-neutral-700;
     }
     h3,
-    figcaption,
-    .hero-text {
+    figcaption {
         @apply text-xl text-center font-semibold text-neutral-700;
     }
     a {
@@ -150,7 +149,6 @@
         @apply text-link;
     }
     section {
-        @apply flex flex-col justify-around gap-3;
     }
     p,
     ul,

@@ -8,8 +8,8 @@ import Image from 'next/image';
 import { useState } from 'react';
 
 const mainPageRoutes = {
-    Squash: 'squash',
     Tennis: 'tennis',
+    Squash: 'squash',
     'Club hire': 'club-hire',
     Memberships: 'memberships',
     'Contact us': 'contact-us',
