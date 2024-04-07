@@ -1,8 +1,10 @@
 import BookingCourtsParagraph from '@/app/_components/BookingCourtsParagraph';
+import ProspectiveMembersWelcome from '@/app/_components/ProspectiveMembersWelcome';
 import { facebookUrl, iSquashRegistrationUrl, squashTournamentCalendar } from '@/app/globals';
 import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCaptainContactCard';
 import Link from 'next/link';
 import SquashPageSlideShow from '@/app/squash/SquashPageSlideShow';
+import InterclubInto from '@/app/_components/InterclubIntro';
 
 export default function Squash() {
     return (
@@ -20,13 +22,12 @@ export default function Squash() {
             </section>
             <section>
                 <h2>Club nights</h2>
-                <p>Squash club nights are every week on Thursdays 5:30pm to 8pm, and Sundays 3pm to 5pm.</p>
-                <h3>Who can come along?</h3>
-                <p>
-                    Anyone who is a member or considering becoming one. There is no fee for using the courts,
-                    balls, or rackets for them. We do ask that after their 2nd visit and they wish to continue
-                    coming along that they <Link href="/memberships">join as a club member</Link>.
-                </p>
+                <p>Squash club nights run every week:</p>
+                <ul>
+                    <li>Thursdays 5:30pm to 8pm</li>
+                    <li>Sundays 3pm to 5pm</li>
+                </ul>
+                <ProspectiveMembersWelcome />
                 <h3>What do I do?</h3>
                 <p>
                     Come down to the club from about 5:30pm on Thursdays or 3pm on Sundays, wander into the
@@ -59,10 +60,7 @@ export default function Squash() {
             </section>
             <section>
                 <h2>Interclub</h2>
-                <p>
-                    If you’re serious about squash or even wanting a little more challenge than the social
-                    games you’ve been playing, then Interclub is the competition for you.
-                </p>
+                <InterclubInto />
                 <p>
                     Autumn Interclub starts in March, Winter Interclub in May/June, and Spring Interclub in
                     August/September.

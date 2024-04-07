@@ -9,7 +9,7 @@ import SlideShow from '@/app/_components/SlideShow';
 const slides = [
     {
         image: hardCourt,
-        caption: '2x AstroTurfs, 1x hardcourt',
+        caption: '2x astro courts, 1x hard court',
     },
     {
         image: squashCourt,
@@ -21,7 +21,7 @@ const slides = [
     },
     {
         image: astroCourts,
-        caption: '2x AstroTurfs, 1x hardcourt',
+        caption: '2x astro courts, 1x hard court',
     },
     {
         image: loungeInside,
