@@ -41,8 +41,8 @@ export default function Tennis() {
                     they are quickly able to join in fully. If you have any questions, please get in touch
                     with our <a href="#club-manager">club manager</a>.
                 </p>
-                <ClubManagerContactCard center />
             </section>
+            <ClubManagerContactCard center />
             <section>
                 <h2>Interclub</h2>
                 <InterclubInto />

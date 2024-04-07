@@ -1,4 +1,3 @@
-import squashCourt from '@/public/images/photos/squash-glass-court-1-1200x900.jpg';
 import SlideShow from '@/app/_components/SlideShow';
 import grassCourts from '@/public/images/photos/grass-courts-1-1200x900.jpg';
 import astroCourts from '@/public/images/photos/tennis-courts-2-1200x900.jpg';

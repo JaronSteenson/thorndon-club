@@ -1,22 +1,17 @@
 import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerContactCard';
-import grassCourt1 from '@/public/images/photos/grass-courts-1.jpg';
-import ExpandableImage from '@/app/_components/ExpandableImage';
+import ClubHirePageSlideShow from '@/app/club-hire/ClubHirePageSlideShow';
 
 export default function ClubHire() {
     return (
         <>
-            <h1>Club hire</h1>
-            <h2>Perfect for private events, work parties, or festive celebrations</h2>
-            <section className="flex flex-wrap flex-row justify-center items-center">
-                <ExpandableImage thumb={grassCourt1} full={grassCourt1} alt="'Grass court photo 1'" />
-                <ExpandableImage thumb={grassCourt1} full={grassCourt1} alt="'Grass court photo 1'" />
-                <ExpandableImage thumb={grassCourt1} full={grassCourt1} alt="'Grass court photo 1'" />
-            </section>
             <section>
-                <h3>Call now to organise a booking</h3>
-                <div className="flex justify-between gap-6">
-                    <ClubManagerContactCard />
-                </div>
+                <h1>Club hire</h1>
+                <h2 className="text-link text-center my-3">
+                    Perfect for private events,
+                    <br />
+                    work parties, or festive celebrations 🎉
+                </h2>
+                <ClubHirePageSlideShow />
             </section>
             <section>
                 <h2>Bar use</h2>
@@ -41,9 +36,8 @@ export default function ClubHire() {
                         compliance with Liquor License
                     </li>
                 </ul>
-                <h3>Drinks and bar snacks prices</h3>
-                <div className="flex flex-wrap flex-row justify-center items-center">
-                    <ExpandableImage thumb={grassCourt1} full={grassCourt1} alt="'Grass court photo 1'" />
+                <div className="flex justify-center text-xl">
+                    <a href="/bar-prices-functions.pdf">Drinks and bar snack prices</a>
                 </div>
             </section>
             <section>
@@ -63,15 +57,19 @@ export default function ClubHire() {
                 <h2>Meeting room hire</h2>
                 <ul>
                     <li>We have two split rooms available for use</li>
-                    <li>Charge is $150 for ½ day hire</li>
-                    <li>Charge is $250 for 1 full day hire</li>
+                    <li>Charge is $150 for half day hire</li>
+                    <li>Charge is $250 for full day hire</li>
                     <li>Wifi</li>
                 </ul>
+            </section>
+            <section>
+                <h2 className="mb-3">Get in touch with our club manager to make a booking</h2>
+                <ClubManagerContactCard center />
             </section>
         </>
     );
 }
 
 function SecondaryInfo({ children }: { children: string }) {
-    return <span className="text-xs text-gray-500"> {children}</span>;
+    return <div className="text-sm text-gray-500"> {children}</div>;
 }
