@@ -11,7 +11,7 @@ export default function Home() {
             <section className="bg-white flex items-center flex-col md:flex-row">
                 <Image className="bg-white rounded p-1" src={logo} width={200} height={200} alt="logo" />
                 <div className="flex flex-wrap flex-col gap-6">
-                    <h3 className="px-6 max-w-96">
+                    <h3 className="px-6 max-w-96 text-xl text-center font-semibold">
                         Tennis, Squash and more just a stones throw from the Wellington cbd.
                     </h3>
                     <div className="flex justify-center gap-6 flex-wrap">

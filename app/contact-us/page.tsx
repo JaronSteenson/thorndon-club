@@ -19,10 +19,12 @@ export default function ContactUs() {
             </section>
             <section className="card-double">
                 <h2>Report an accident or submit a complaint</h2>
-                <div className="flex flex-wrap justify-around flex-row gap-6">
-                    <p className="bg-blue-200 p-3 rounded min-w-full">
+                <div className="flex flex-wrap justify-center">
+                    <p className="bg-blue-200 p-3 m-0 mb-6 rounded w-fit">
                         Please note accidents should be reported within 24 hours.
                     </p>
+                </div>
+                <div className="flex flex-wrap justify-around flex-row gap-6">
                     <AccidentReportEmailLink />
                     <ComplaintEmailLink />
                 </div>

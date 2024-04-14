@@ -23,7 +23,7 @@ export default function SponsorSection() {
                 <h2 className="text-4xl pb-6">Our sponsors</h2>
                 <Row>
                     <ImageLink
-                        className="rounded"
+                        className="rounded mb-6"
                         main
                         href="https://www.ardex.co.nz"
                         src={ardexLogo}

@@ -22,11 +22,11 @@
     }
 
     .elevation {
-        @apply border-neutral-200 border-solid border-2;
+        @apply border-primary border-solid border-2;
     }
 
     .nav-bar {
-        @apply bg-white text-black elevation relative;
+        @apply bg-white text-black elevation relative border-primary;
         border-top: none;
         border-right: none;
         border-left: none;
@@ -43,6 +43,7 @@
     }
 
     .slide-show-image {
+        @apply border-primary border-solid border-y-2;
         @apply bg-neutral-800;
     }
 
@@ -53,7 +54,7 @@
         }
 
         .slide-show-image {
-            @apply rounded;
+            @apply rounded border-x-2;
         }
     }
 
@@ -93,12 +94,13 @@
     }
 
     .iframe-card {
-        @apply card;
+        @apply card border-x-0;
         width: 100vw;
     }
 
     @media (min-width: 400px) {
         .iframe-card {
+            @apply border-x-2;
             width: 400px;
         }
     }
@@ -113,23 +115,25 @@
     }
 
     .overview-card {
-        @apply card;
+        @apply card border-x-0;
         width: 100vw;
     }
 
     @media (min-width: 300px) {
         .overview-card {
+            @apply border-x-2;
             width: 350px;
         }
     }
 
     .card-double {
-        @apply card;
+        @apply card border-x-0;
         width: 100vw;
     }
 
     @media (min-width: calc(400px + 400px + 3rem)) {
         .card-double {
+            @apply border-x-2;
             width: calc(400px + 400px + 3rem);
         }
     }
@@ -141,18 +145,36 @@
     }
 
     .sponsors-sections {
-        @apply bg-neutral-50 elevation rounded pt-6 pb-24;
+        @apply bg-neutral-50 border-primary border-solid border-t-2 pt-6 pb-24;
         width: 100%;
+    }
+
+    .wide-table {
+        min-width: 60rem;
+    }
+
+    .membership-card {
+        @apply card p-3;
+        width: calc(100vw - 3rem);
+    }
+
+    @media (min-width: calc(400px + 3rem)) {
+        .membership-card {
+            width: 400px;
+        }
     }
 
     /* Main content blocks */
     h1 {
-        @apply text-5xl text-center font-bold text-neutral-700;
+        @apply text-5xl text-center font-bold text-neutral-700 m-3;
     }
     h2 {
-        @apply text-2xl text-center font-semibold text-neutral-700;
+        @apply text-2xl text-center font-semibold text-neutral-700 m-3;
     }
     h3,
+    figcaption {
+        @apply text-xl text-center font-semibold text-neutral-700;
+    }
     figcaption {
         @apply text-xl text-center font-semibold text-neutral-700;
     }
@@ -161,27 +183,10 @@
         @apply text-link;
     }
 
-    h1,
-    h2,
-    h3,
-    figcaption,
     p,
     ul,
     ol {
         @apply max-w-prose m-3;
-    }
-
-    table {
-        @apply text-sm;
-        max-width: 1vw;
-
-        @media (min-width: 600px) {
-            font-size: 1rem;
-        }
-        @media (min-width: 1200px) {
-            width: 1200px;
-            max-width: 1200px;
-        }
     }
 
     section:has(p, ul, ol) {
@@ -256,6 +261,9 @@
         text-align: left;
     }
 
+    tr {
+        @apply border-primary border-b-2 border-solid;
+    }
     tr:nth-child(odd) td {
         @apply bg-gray-100 rounded;
     }
