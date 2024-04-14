@@ -10,7 +10,11 @@
     }
 
     main {
-        @apply bg-white flex min-h-screen flex-col items-center pt-6 pb-64 gap-12;
+        @apply bg-white flex min-h-screen flex-col items-center pt-6 pb-32 gap-6;
+    }
+
+    main:has(.card-double) {
+        @apply gap-12;
     }
 
     main:has(.sponsors-sections) {
@@ -156,8 +160,11 @@
         text-decoration: none;
         @apply text-link;
     }
-    section {
-    }
+
+    h1,
+    h2,
+    h3,
+    figcaption,
     p,
     ul,
     ol {
