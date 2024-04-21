@@ -31,10 +31,6 @@
         border-right: none;
         border-left: none;
         width: 100%;
-
-        a {
-            @apply text-neutral-700;
-        }
     }
 
     .slide-show {
@@ -189,8 +185,8 @@
         @apply max-w-prose m-3;
     }
 
-    section:has(p, ul, ol) {
-        @media (min-width: 65ch) {
+    @media (min-width: 65ch) {
+        section:has(p, ul, ol) {
             /* Same as max-w-prose */
             width: 65ch;
         }
