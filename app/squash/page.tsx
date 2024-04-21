@@ -5,6 +5,7 @@ import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCapta
 import Link from 'next/link';
 import SquashPageSlideShow from '@/app/squash/SquashPageSlideShow';
 import InterclubInto from '@/app/_components/InterclubIntro';
+import Beginners from '@/app/_components/Beginners';
 
 export default function Squash() {
     return (
@@ -46,6 +47,7 @@ export default function Squash() {
                     Due to popularity, most courts will be playing three quarter court, some courts may have
                     single matches depending on numbers.
                 </p>
+                <Beginners />
             </section>
             <section>
                 <h2>Club tournaments</h2>
