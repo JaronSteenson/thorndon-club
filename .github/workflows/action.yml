@@ -5,7 +5,7 @@ on:
 jobs:
     build:
         runs-on: ubuntu-20.04
-        name: Build
+        name: Build & Deploy
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
@@ -15,3 +15,11 @@ jobs:
             - run: npm run format-check
             - run: npm run lint
             - run: npm run build
+            - name: Deploy
+              uses: nogsantos/scp-deploy@master
+              with:
+                  src: ./out/*
+                  host: thorndonclub.co.nz
+                  remote: /home1/thorndonclub/public_html
+                  user: thorndonclub
+                  key: ${{ secrets.SSH_KEY }}
