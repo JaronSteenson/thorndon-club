@@ -1,0 +1,14 @@
+RewriteOptions inherit
+RewriteEngine on
+
+# Remove trailing slashes (from old wordpress links)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)/$ /$1 [R,L]
+
+# For next js path.html -> path
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html
+
+# For next js 404 page
+ErrorDocument 404 /404
