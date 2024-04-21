@@ -84,8 +84,8 @@ export default function PricingGuide() {
                 <thead>
                     <tr>
                         <th>Type</th>
-                        <th>Annual</th>
                         <th>Monthly</th>
+                        <th>Annual</th>
                         <th>Notes</th>
                     </tr>
                 </thead>
