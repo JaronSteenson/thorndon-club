@@ -54,8 +54,8 @@ export default function Tennis() {
                     Get in touch with our <Link href="#tennis-club-captain">Tennis Club Captain</Link> to
                     register your interest.
                 </p>
+                <TennisCaptainContactCard center />
             </section>
-            <TennisCaptainContactCard center />
         </>
     );
 }

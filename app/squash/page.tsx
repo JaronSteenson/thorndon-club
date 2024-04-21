@@ -113,8 +113,8 @@ export default function Squash() {
                         organise assessing your grade
                     </li>
                 </ol>
+                <SquashCaptainContactCard center />
             </section>
-            <SquashCaptainContactCard center />
         </>
     );
 }
