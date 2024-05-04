@@ -5,7 +5,7 @@ const membershipTypes = [
         type: 'Unlimited',
         annual: '395',
         monthly: '40',
-        notes: <>2 unlimited and 2 Junior memberships.</>,
+        notes: <>Full membership access with tennis and/or squash affiliation.</>,
     },
     {
         type: 'Midweek',
@@ -44,18 +44,19 @@ const membershipTypes = [
         type: 'Family',
         annual: '840',
         monthly: '77',
-        notes: (
-            <>
-                Full membership access with tennis and/or squash affiliation (able to play in interclub and
-                tournaments).
-            </>
-        ),
+        notes: <>2 Unlimited and up to 3 Junior Memberships.</>,
     },
     {
         type: 'Junior',
         annual: '110',
-        monthly: '40',
-        notes: <>18 years or younger.</>,
+        monthly: undefined,
+        notes: <>2 Unlimited and up to 3 Junior Memberships.</>,
+    },
+    {
+        type: 'Parent/Child',
+        annual: '460',
+        monthly: '46',
+        notes: <>1 Unlimited and 1 Junior Membership.</>,
     },
     {
         type: 'Country',
@@ -63,9 +64,8 @@ const membershipTypes = [
         monthly: undefined,
         notes: (
             <>
-                Unlimited Membership if you are a fully affiliated player at another squash or tennis club.
-                Country members must provide proof of club affiliation at another club and will be able to
-                make use of courts excluding during peak times midweek (4:30pm to 7:30pm).
+                You need to provide proof of full affiliation at another squash or tennis club. Unable to book
+                courts during peak times 4:30pm to 7:30pm.
             </>
         ),
     },
@@ -73,7 +73,7 @@ const membershipTypes = [
         type: 'Corporate/Business',
         annual: '1400',
         monthly: undefined,
-        notes: <>2 access cards provided more available.</>,
+        notes: <>2 access cards provided to be shared.</>,
     },
 ];
 
@@ -84,8 +84,8 @@ export default function PricingGuide() {
                 <thead>
                     <tr>
                         <th>Type</th>
-                        <th>Monthly</th>
                         <th>Annual</th>
+                        <th>Monthly</th>
                         <th>Notes</th>
                     </tr>
                 </thead>
@@ -93,8 +93,8 @@ export default function PricingGuide() {
                     {membershipTypes.map(({ type, annual, monthly, notes }) => (
                         <tr key={type}>
                             <td>{type}</td>
-                            <td>{monthly ? '$' + monthly : 'n/a'}</td>
-                            <td>{annual ? '$' + annual : 'n/a'}</td>
+                            <td>{annual ? '$' + annual : ''}</td>
+                            <td>{monthly ? '$' + monthly : ''}</td>
                             <td>{notes}</td>
                         </tr>
                     ))}
@@ -105,9 +105,9 @@ export default function PricingGuide() {
                     <div key={type} className="membership-card">
                         <h2>{type}</h2>
                         <div>
-                            {monthly && <strong>${monthly} monthly</strong>}
-                            {monthly && annual && ', '}
                             {annual && <strong>${annual} annual</strong>}
+                            {monthly && annual && ', '}
+                            {monthly && <strong>${monthly} monthly</strong>}
                         </div>
                         {notes && <div>{notes}</div>}
                     </div>
