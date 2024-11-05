@@ -3,26 +3,26 @@ import { helloClubRegisterUrl } from '@/app/globals';
 const membershipTypes = [
     {
         type: 'Unlimited',
-        annual: '395',
-        monthly: '40',
+        annual: '435',
+        monthly: '45',
         notes: <>Full membership access with tennis and/or squash affiliation.</>,
     },
     {
         type: 'Midweek',
-        annual: '240',
+        annual: '265',
         monthly: undefined,
         notes: <>9am to 5pm weekdays.</>,
     },
     {
         type: 'Tertiary',
-        annual: '240',
-        monthly: '24',
+        annual: '265',
+        monthly: '27',
         notes: <>Full-time student, 25 years or younger.</>,
     },
     {
         type: 'Casual monthly',
         annual: undefined,
-        monthly: '50',
+        monthly: '55',
         notes: <>No minimum time commitment.</>,
     },
     {
@@ -42,8 +42,8 @@ const membershipTypes = [
     },
     {
         type: 'Family',
-        annual: '840',
-        monthly: '77',
+        annual: '925',
+        monthly: '85',
         notes: <>2 Unlimited and up to 3 Junior Memberships.</>,
     },
     {
@@ -54,8 +54,8 @@ const membershipTypes = [
     },
     {
         type: 'Parent/Child',
-        annual: '460',
-        monthly: '46',
+        annual: '480',
+        monthly: '50',
         notes: <>1 Unlimited and 1 Junior Membership.</>,
     },
     {
