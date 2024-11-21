@@ -50,7 +50,7 @@ const membershipTypes = [
         type: 'Junior',
         annual: '110',
         monthly: undefined,
-        notes: <>2 Unlimited and up to 3 Junior Memberships.</>,
+        notes: <>18 years or younger.</>,
     },
     {
         type: 'Parent/Child',
