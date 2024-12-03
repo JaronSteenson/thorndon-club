@@ -4,7 +4,7 @@ interface Props {
     id: string;
     name: string;
     role: string;
-    phone: string;
+    phone?: string;
     email: string;
     avatar?: any;
     center: boolean;
@@ -19,8 +19,12 @@ export default function ContactCard({ id, name, role, phone, email, avatar, cent
                     <TitleSection name={name} role={role} />
                 </div>
                 <div className="text-center text-sm mt-2">
-                    <a href={`tel:${phone}`}>{formatPhone(phone)}</a>
-                    <br />
+                    {phone && (
+                        <>
+                            <a href={`tel:${phone}`}>{formatPhone(phone)}</a>
+                            <br />
+                        </>
+                    )}
                     <a href={`mailto:${email}`}>{email}</a>
                 </div>
             </div>
