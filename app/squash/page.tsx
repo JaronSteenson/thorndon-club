@@ -1,6 +1,11 @@
 import BookingCourtsParagraph from '@/app/_components/BookingCourtsParagraph';
 import ProspectiveMembersWelcome from '@/app/_components/ProspectiveMembersWelcome';
-import { facebookUrl, iSquashRegistrationUrl, squashTournamentCalendar } from '@/app/globals';
+import {
+    facebookUrl,
+    iSquashRegistrationUrl,
+    squashTournamentCalendar,
+    squashTournaments,
+} from '@/app/globals';
 import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCaptainContactCard';
 import Link from 'next/link';
 import SquashPageSlideShow from '@/app/squash/SquashPageSlideShow';
@@ -20,6 +25,22 @@ export default function Squash() {
                 </p>
                 <BookingCourtsParagraph />
                 <SquashPageSlideShow />
+            </section>
+            <section>
+                <h2>Our tournaments</h2>
+                <p>
+                    We have typically have three major tournaments each year, as well as Club Champs and the
+                    Thorndon Doubles.
+                </p>
+                <ul>
+                    {squashTournaments.map(({ date, name, isquashUrl }) => (
+                        <li key={name}>
+                            <a href={isquashUrl} rel="noopener" target="_blank">
+                                {date} {name}
+                            </a>
+                        </li>
+                    ))}
+                </ul>
             </section>
             <section>
                 <h2>Club nights</h2>
@@ -48,17 +69,6 @@ export default function Squash() {
                     single matches depending on numbers.
                 </p>
                 <Beginners />
-            </section>
-            <section>
-                <h2>Club tournaments</h2>
-                <p>
-                    We have three major tournaments each year, as well as Club Champs and the Thorndon
-                    Doubles. See the latest tournament schedule on the{' '}
-                    <a href={squashTournamentCalendar} target="_blank">
-                        Squash NZ calendar
-                    </a>
-                    .
-                </p>
             </section>
             <section>
                 <h2>Interclub</h2>

@@ -19,3 +19,20 @@ export const squashTournamentCalendar = 'https://www.squashnz.co.nz/events/' as 
 export const tennisCaptain = 'Tim Gudsell' as const;
 export const tennisCaptainEmail = 'timgudsell@hotmail.com' as const;
 export const tennisCaptainPhone = '0211896220' as const;
+export const squashTournaments = [
+    {
+        name: 'Thorndon ARDEX Open',
+        date: '25-Apr-2025',
+        isquashUrl: 'https://www.squash.org.nz/sit/register_for_tournament#/register/1081407',
+    },
+    {
+        name: 'Team Cloud Thorndon Open',
+        date: '15-Aug-2025',
+        isquashUrl: 'https://www.squash.org.nz/sit/register_for_tournament#/register/1081408',
+    },
+    {
+        name: 'Thorndon Doubles',
+        date: '6-Dec-2025',
+        isquashUrl: 'https://www.squash.org.nz/sit/register_for_tournament#/register/1081409',
+    },
+];
