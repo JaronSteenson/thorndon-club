@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import { clubManager } from '@/app/globals';
 import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 
 export default function Beginners() {
@@ -10,8 +10,8 @@ export default function Beginners() {
                 players with a wide range of skills. However, this can be useful to see how your skills match
                 up. We want to encourage and welcome new members and will try and assist. There is coaching at
                 the club, and people often find that with some lessons and practice they are quickly able to
-                join in fully. If you have any questions, please get in touch with our{' '}
-                <a href="#operations-manager">operations manager</a>.
+                join in fully. If you have any questions, please get in with{' '}
+                <a href="#operations">{clubManager}</a>.
             </p>
             <OperationsManagerContactCard center />
         </>

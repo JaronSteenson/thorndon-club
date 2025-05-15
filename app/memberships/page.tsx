@@ -1,4 +1,4 @@
-import { helloClubRegisterUrl } from '@/app/globals';
+import { clubManager, helloClubRegisterUrl } from '@/app/globals';
 import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 import PricingGuide from '@/app/memberships/PricingGuide';
 
@@ -26,7 +26,7 @@ export default function Memberships() {
                         Register via Hello Club
                     </a>
                 </div>
-                <p>If you have any questions please get in touch with our operations manager:</p>
+                <p>If you have any questions please get in touch with {clubManager}</p>
                 <OperationsManagerContactCard center />
             </section>
         </>

@@ -1,3 +1,4 @@
+import { clubManager } from '@/app/globals';
 import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 import VenueHirePageSlideShow from '@/app/venue-hire/VenueHirePageSlideShow';
 
@@ -63,7 +64,7 @@ export default function ClubHire() {
                 </ul>
             </section>
             <section>
-                <h2 className="mb-3">Get in touch with our operations manager to make a booking</h2>
+                <h2 className="mb-3">Get in touch with {clubManager} to make a booking</h2>
                 <OperationsManagerContactCard center />
             </section>
         </>
