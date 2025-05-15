@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerContactCard';
+import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 
 export default function Beginners() {
     return (
@@ -11,9 +11,9 @@ export default function Beginners() {
                 up. We want to encourage and welcome new members and will try and assist. There is coaching at
                 the club, and people often find that with some lessons and practice they are quickly able to
                 join in fully. If you have any questions, please get in touch with our{' '}
-                <a href="#club-manager">club manager</a>.
+                <a href="#operations-manager">operations manager</a>.
             </p>
-            <ClubManagerContactCard center />
+            <OperationsManagerContactCard center />
         </>
     );
 }

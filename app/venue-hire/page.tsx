@@ -1,4 +1,4 @@
-import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerContactCard';
+import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 import VenueHirePageSlideShow from '@/app/venue-hire/VenueHirePageSlideShow';
 
 export default function ClubHire() {
@@ -63,8 +63,8 @@ export default function ClubHire() {
                 </ul>
             </section>
             <section>
-                <h2 className="mb-3">Get in touch with our club manager to make a booking</h2>
-                <ClubManagerContactCard center />
+                <h2 className="mb-3">Get in touch with our operations manager to make a booking</h2>
+                <OperationsManagerContactCard center />
             </section>
         </>
     );

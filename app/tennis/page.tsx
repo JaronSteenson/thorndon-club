@@ -1,6 +1,6 @@
 import BookingCourtsParagraph from '@/app/_components/BookingCourtsParagraph';
 import ProspectiveMembersWelcome from '@/app/_components/ProspectiveMembersWelcome';
-import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerContactCard';
+import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 import InterclubInto from '@/app/_components/InterclubIntro';
 import Link from 'next/link';
 import TennisCaptainContactCard from '@/app/_components/ContactCards/TennisCaptainContactCard';

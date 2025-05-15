@@ -1,6 +1,6 @@
 import AccidentReportEmailLink from '@/app/contact-us/AccidentReportEmailLink';
 import ComplaintEmailLink from '@/app/contact-us/ComplaintEmailLink';
-import ClubManagerContactCard from '@/app/_components/ContactCards/ClubManagerContactCard';
+import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 import TennisCaptainContactCard from '@/app/_components/ContactCards/TennisCaptainContactCard';
 import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCaptainContactCard';
 import PresidentContactCard from '@/app/_components/ContactCards/PresidentContactCard';
@@ -12,7 +12,7 @@ export default function ContactUs() {
     return (
         <>
             <section className="flex flex-wrap flex-row justify-center gap-12">
-                <ClubManagerContactCard />
+                <OperationsManagerContactCard />
                 <PresidentContactCard />
                 <SquashCaptainContactCard />
                 <TennisCaptainContactCard />
