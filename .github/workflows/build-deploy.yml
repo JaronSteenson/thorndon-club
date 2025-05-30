@@ -1,19 +1,29 @@
+name: Build and deploy
 on:
     push:
         branches:
             - master
+    workflow_dispatch:
+        inputs:
+            skip_linting:
+                description: 'Skip linting and formatting checks'
+                default: false
+                required: false
+                type: boolean
 jobs:
     build:
-        runs-on: ubuntu-22.04
-        name: Build & Deploy
+        runs-on: ubuntu-24.04
+        name: Build and deploy
         steps:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
               with:
                   node-version-file: 'package.json'
             - run: npm ci
-            - run: npm run format-check
-            - run: npm run lint
+            - if: ${{ inputs.skip_linting != true }}
+              run: npm run format-check
+            - if: ${{ inputs.skip_linting != true }}
+              run: npm run lint
             - run: npm run build
             - name: Deploy
               uses: nogsantos/scp-deploy@master
@@ -23,3 +33,4 @@ jobs:
                   remote: /home1/thorndonclub/public_html
                   user: thorndonclub
                   key: ${{ secrets.SSH_KEY }}
+            - run: . synthetic-home-page-load.sh

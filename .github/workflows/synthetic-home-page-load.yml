@@ -1,0 +1,12 @@
+name: Synthetic home page load
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: '0 8 * * *'
+
+jobs:
+    synthetic-home-page-load:
+        runs-on: ubuntu-24.04
+        steps:
+            - uses: actions/checkout@v4
+            - run: . synthetic-home-page-load.sh
