@@ -124,7 +124,7 @@ function Links({ onItemClick }: { onItemClick: () => void }) {
                 />
                 Uniforms
             </a>
-            <a className="button-neutral text-md" rel="noopener" href={helloClubUrl}>
+            <a className="navbar-booking-button text-md" rel="noopener" href={helloClubUrl}>
                 <Image className="inline pr-2" src={helloClubLogo} height="24" alt="Hello Club logo" />
                 Book a court
             </a>

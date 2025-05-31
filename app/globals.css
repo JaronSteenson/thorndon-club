@@ -194,11 +194,15 @@
 
     /* Buttons  */
     .button-primary {
-        @apply bg-primary hover:bg-primary text-white font-bold py-2 px-2 rounded text-center;
+        @apply bg-primary hover:bg-green-600 text-white font-bold py-2 px-2 rounded text-center;
     }
 
     .button-neutral {
         @apply bg-neutral-200 hover:bg-neutral-300 text-gray-500 font-bold py-2 px-2 rounded text-center;
+    }
+
+    .navbar-booking-button {
+        @apply text-gray-500 font-bold py-2 px-2 rounded text-center;
     }
 
     /* Radios and checkboxes */
