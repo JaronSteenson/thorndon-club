@@ -1,11 +1,13 @@
 'use client';
 
-import { helloClubUrl, merchStoreLink } from '@/app/globals';
+import globals from '@/app/globals.json';
 import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
 import externalLinkIcon from '@/public/images/icons/external-link.svg';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
+
+const { helloClubUrl, merchStoreLink } = globals;
 
 const mainPageRoutes = {
     Tennis: 'tennis',

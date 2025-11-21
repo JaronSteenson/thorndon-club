@@ -1,4 +1,6 @@
-import globalsData from '@/app/globals.json';
+import globals from '@/app/globals.json';
+
+const { memberships } = globals;
 
 export default function PricingGuide() {
     return (
@@ -13,7 +15,7 @@ export default function PricingGuide() {
                     </tr>
                 </thead>
                 <tbody>
-                    {globalsData.memberships.map(({ type, annual, monthly, notes }) => (
+                    {memberships.map(({ type, annual, monthly, notes }) => (
                         <tr key={type}>
                             <td>{type}</td>
                             <td>{annual ? '$' + annual : ''}</td>
@@ -24,7 +26,7 @@ export default function PricingGuide() {
                 </tbody>
             </table>
             <div className="flex justify-center gap-6 flex-wrap lg:hidden">
-                {globalsData.memberships.map(({ type, annual, monthly, notes }) => (
+                {memberships.map(({ type, annual, monthly, notes }) => (
                     <div key={type} className="membership-card">
                         <h2>{type}</h2>
                         <div>

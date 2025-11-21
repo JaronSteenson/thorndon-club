@@ -1,6 +1,8 @@
-import { squashCaptain, squashCaptainPhone, squashCaptainEmail } from '@/app/globals';
+import globals from '@/app/globals.json';
 import avatar from '@/public/images/avatars/squash-club-captain-avatar-60x60.avif';
 import ContactCard from '@/app/_components/ContactCards/ContactCard';
+
+const { squashCaptain, squashCaptainPhone, squashCaptainEmail } = globals;
 
 export default function SquashCaptainContactCard({ center = false }) {
     return (

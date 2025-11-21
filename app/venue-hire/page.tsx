@@ -1,6 +1,8 @@
-import { clubManager } from '@/app/globals';
+import globals from '@/app/globals.json';
 import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 import VenueHirePageSlideShow from '@/app/venue-hire/VenueHirePageSlideShow';
+
+const { clubManager } = globals;
 
 export default function ClubHire() {
     return (

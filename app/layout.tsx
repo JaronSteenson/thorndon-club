@@ -3,7 +3,9 @@ import { Inter } from 'next/font/google';
 import './globals.css';
 import NavBar from '@/app/_components/NavBar';
 import { ReactNode } from 'react';
-import { siteNameShort, siteNameVeryLong } from '@/app/globals';
+import globals from '@/app/globals.json';
+
+const { siteNameShort, siteNameVeryLong } = globals;
 
 const inter = Inter({ subsets: ['latin'] });
 

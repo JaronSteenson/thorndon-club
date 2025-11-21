@@ -1,16 +1,13 @@
 import BookingCourtsParagraph from '@/app/_components/BookingCourtsParagraph';
 import ProspectiveMembersWelcome from '@/app/_components/ProspectiveMembersWelcome';
-import {
-    facebookUrl,
-    iSquashRegistrationUrl,
-    squashTournamentCalendar,
-    squashTournaments,
-} from '@/app/globals';
+import globals from '@/app/globals.json';
 import SquashCaptainContactCard from '@/app/_components/ContactCards/SquashCaptainContactCard';
 import Link from 'next/link';
 import SquashPageSlideShow from '@/app/squash/SquashPageSlideShow';
 import InterclubInto from '@/app/_components/InterclubIntro';
 import Beginners from '@/app/_components/Beginners';
+
+const { facebookUrl, iSquashRegistrationUrl, squashTournaments } = globals;
 
 export default function Squash() {
     return (

@@ -1,4 +1,6 @@
-import { clubEmail } from '@/app/globals';
+import globals from '@/app/globals.json';
+
+const { clubEmail } = globals;
 
 interface Props {
     subject: string;

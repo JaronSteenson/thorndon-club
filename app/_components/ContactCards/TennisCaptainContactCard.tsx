@@ -1,5 +1,7 @@
-import { tennisCaptain, tennisCaptainPhone, tennisCaptainEmail } from '@/app/globals';
+import globals from '@/app/globals.json';
 import ContactCard from '@/app/_components/ContactCards/ContactCard';
+
+const { tennisCaptain, tennisCaptainPhone, tennisCaptainEmail } = globals;
 
 export default function TennisCaptainContactCard({ center = false }) {
     return (

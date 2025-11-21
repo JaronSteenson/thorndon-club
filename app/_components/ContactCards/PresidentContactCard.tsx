@@ -1,5 +1,7 @@
-import { president, presidentPhone, presidentEmail } from '@/app/globals';
+import globals from '@/app/globals.json';
 import ContactCard from '@/app/_components/ContactCards/ContactCard';
+
+const { president, presidentPhone, presidentEmail } = globals;
 
 export default function PresidentContactCard({ center = false }) {
     return (

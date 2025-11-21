@@ -1,7 +1,9 @@
 import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
 import Image from 'next/image';
-import { helloClubUrl } from '@/app/globals';
+import globals from '@/app/globals.json';
 import externalLinkIcon from '@/public/images/icons/external-link.svg';
+
+const { helloClubUrl } = globals;
 
 /**
  * This just exist for Google to scrape,

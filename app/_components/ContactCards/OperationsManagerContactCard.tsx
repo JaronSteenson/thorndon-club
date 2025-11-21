@@ -1,6 +1,8 @@
-import { clubManager, clubEmail, clubManagerPhone } from '@/app/globals';
+import globals from '@/app/globals.json';
 import avatar from '@/public/images/avatars/operations-avatar-60x60.avif';
 import ContactCard from '@/app/_components/ContactCards/ContactCard';
+
+const { clubManager, clubEmail, clubManagerPhone } = globals;
 
 export default function OperationsManagerContactCard({ center = false }) {
     return (

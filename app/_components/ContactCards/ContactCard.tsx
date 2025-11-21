@@ -4,7 +4,7 @@ interface Props {
     id: string;
     name: string;
     role: string;
-    phone?: string;
+    phone?: string | null;
     email: string;
     avatar?: any;
     center: boolean;

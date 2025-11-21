@@ -4,8 +4,10 @@ import HomePageSlideShow from '@/app/_components/HomePageSlideShow';
 import Image from 'next/image';
 import logo from '@/public/images/logos/thorndon-club-logo-200x200.png';
 import EmbeddedContactSections from '@/app/_components/EmbeddedContactSections';
-import { helloClubUrl } from '@/app/globals';
+import globals from '@/app/globals.json';
 import helloClubLogo from '@/public/images/logos/hello-club-logo.svg';
+
+const { helloClubUrl } = globals;
 
 export default function Home() {
     return (

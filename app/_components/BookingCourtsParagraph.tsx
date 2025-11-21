@@ -1,4 +1,6 @@
-import { helloClubUrl } from '@/app/globals';
+import globals from '@/app/globals.json';
+
+const { helloClubUrl } = globals;
 
 export default function BookingCourtsParagraph() {
     return (

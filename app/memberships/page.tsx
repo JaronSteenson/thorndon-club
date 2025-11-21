@@ -1,6 +1,8 @@
-import { clubManager, helloClubRegisterUrl } from '@/app/globals';
+import globals from '@/app/globals.json';
 import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 import PricingGuide from '@/app/memberships/PricingGuide';
+
+const { clubManager, helloClubRegisterUrl } = globals;
 
 export default function Memberships() {
     return (
