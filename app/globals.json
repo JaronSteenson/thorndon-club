@@ -1,0 +1,101 @@
+{
+    "clubEmail": "info@thorndonclub.co.nz",
+    "clubManager": "Brad Watts",
+    "clubManagerPhone": "0273905892",
+    "facebookUrl": "https://www.facebook.com/thorndonclub/",
+    "helloClubUrl": "https://thorndon.helloclub.com/?_gl=1*1kwnnf3*_gcl_au*NzgzNzA0NDY4LjE3MjExMjI2NjA",
+    "helloClubRegisterUrl": "https://thorndon.helloclub.com/register",
+    "iSquashRegistrationUrl": "https://www.squash.org.nz/sit/registration#/register",
+    "merchStoreLink": "https://codesport.co.nz/catalog/TTSC-1106899.htmx",
+    "president": "Ian Rogers",
+    "presidentEmail": "ian.alan.rogers@gmail.com",
+    "presidentPhone": "021903508",
+    "siteNameShort": "Thorndon Club",
+    "siteNameVeryLong": "Thorndon Tennis and Squash Club",
+    "squashCaptain": "Nathan Dunning",
+    "squashCaptainEmail": "squash@thorndonclub.co.nz",
+    "squashCaptainPhone": null,
+    "squashTournamentCalendar": "https://www.squashnz.co.nz/events/",
+    "tennisCaptain": "Tim Gudsell",
+    "tennisCaptainEmail": "timgudsell@hotmail.com",
+    "tennisCaptainPhone": "0211896220",
+    "squashTournaments": [
+        {
+            "name": "Thorndon ARDEX Open",
+            "date": "25-Apr-2025",
+            "isquashUrl": "https://www.squash.org.nz/sit/register_for_tournament#/register/1081407"
+        },
+        {
+            "name": "Team Cloud Thorndon Open",
+            "date": "15-Aug-2025",
+            "isquashUrl": "https://www.squash.org.nz/sit/register_for_tournament#/register/1081408"
+        },
+        {
+            "name": "Thorndon Doubles",
+            "date": "6-Dec-2025",
+            "isquashUrl": "https://www.squash.org.nz/sit/register_for_tournament#/register/1081409"
+        }
+    ],
+    "memberships": [
+        {
+            "type": "Unlimited",
+            "annual": "435",
+            "monthly": "45",
+            "notes": "Full membership access with tennis and/or squash affiliation."
+        },
+        {
+            "type": "Midweek",
+            "annual": "265",
+            "monthly": null,
+            "notes": "9am to 5pm weekdays."
+        },
+        {
+            "type": "Tertiary",
+            "annual": "265",
+            "monthly": "27",
+            "notes": "Full-time student, 25 years or younger."
+        },
+        {
+            "type": "Casual monthly",
+            "annual": null,
+            "monthly": "55",
+            "notes": "No minimum time commitment."
+        },
+        {
+            "type": "Casual hourly",
+            "annual": null,
+            "monthly": null,
+            "notes": "Casual hourly hire of courts is $20 per hour (for non members). This is done by registering via <a href=\"https://thorndon.helloclub.com/register\" rel=\"noopener\",>Hello Club</a> and selecting \"Visitor\" as the booking type. Some rackets are available to be borrowed for no extra charge."
+        },
+        {
+            "type": "Family",
+            "annual": "925",
+            "monthly": "85",
+            "notes": "2 Unlimited and up to 3 Junior Memberships."
+        },
+        {
+            "type": "Junior",
+            "annual": "110",
+            "monthly": null,
+            "notes": "18 years or younger."
+        },
+        {
+            "type": "Parent/Child",
+            "annual": "480",
+            "monthly": "50",
+            "notes": "1 Unlimited and 1 Junior Membership."
+        },
+        {
+            "type": "Country",
+            "annual": "130",
+            "monthly": null,
+            "notes": "You need to provide proof of full affiliation at another squash or tennis club. Unable to book courts during peak times 4:30pm to 7:30pm."
+        },
+        {
+            "type": "Corporate/Business",
+            "annual": "1400",
+            "monthly": null,
+            "notes": "2 access cards provided to be shared."
+        }
+    ]
+}
