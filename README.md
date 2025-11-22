@@ -6,9 +6,9 @@ Most routine content changes (e.g., pricing updates, contact info, tournament in
 
 #### How to make changes
 
-1. Click **Edit** on the file.
-2. Make your changes in the editor.
-3. Scroll down and add a brief description of what you changed.
+1. Make your changes in the editor.
+2. Click the **Commit changes...** button in the top right of the screen.
+3. Add brief description of what you changed in "Commit message".
 4. Click **Commit changes** to save.
 
 After you commit, the website will automatically rebuild and deploy your updates. This usually takes **1–2 minutes**.
