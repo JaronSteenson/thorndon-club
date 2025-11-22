@@ -15,7 +15,6 @@ After you commit, the website will automatically rebuild and deploy your updates
 
 > **Important:** Be careful not to remove quotation marks, commas, or braces — these are required for valid JSON. If you're unsure, ask someone on the team before committing.
 
-
 # Thorndon club website
 
 [![Synthetic home page load](https://github.com/JaronSteenson/thorndon-club/actions/workflows/synthetic-home-page-load.yml/badge.svg)](https://github.com/JaronSteenson/thorndon-club/actions/workflows/synthetic-home-page-load.yml)
