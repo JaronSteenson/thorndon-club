@@ -1,3 +1,21 @@
+### Simple website updates (no technical skills required)
+
+Most routine content changes (e.g., pricing updates, contact info, tournament info) are controlled through a single file: **globals.json**. You can edit it directly in your browser here:
+
+👉 **https://github.com/JaronSteenson/thorndon-club/edit/master/app/globals.json**
+
+#### How to make changes
+
+1. Click **Edit** on the file.
+2. Make your changes in the editor.
+3. Scroll down and add a brief description of what you changed.
+4. Click **Commit changes** to save.
+
+After you commit, the website will automatically rebuild and deploy your updates. This usually takes **1–2 minutes**.
+
+> **Important:** Be careful not to remove quotation marks, commas, or braces — these are required for valid JSON. If you're unsure, ask someone on the team before committing.
+
+
 # Thorndon club website
 
 [![Synthetic home page load](https://github.com/JaronSteenson/thorndon-club/actions/workflows/synthetic-home-page-load.yml/badge.svg)](https://github.com/JaronSteenson/thorndon-club/actions/workflows/synthetic-home-page-load.yml)
