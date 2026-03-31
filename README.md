@@ -1,10 +1,11 @@
-### Simple website updates (no technical skills required)
+# Thorndon club website
+## Quick start - Simple website updates (no technical skills required)
 
 Most routine content changes (e.g., pricing updates, contact info, tournament info) are controlled through a single file: **globals.json**. You can edit it directly in your browser here:
 
 👉 **https://github.com/JaronSteenson/thorndon-club/edit/master/app/globals.json**
 
-#### How to make changes
+### How to make changes
 
 1. Make your changes in the editor.
 2. Click the **Commit changes...** button in the top right of the screen.
@@ -15,7 +16,7 @@ After you commit, the website will automatically rebuild and deploy your updates
 
 > **Important:** Be careful not to remove quotation marks, commas, or braces — these are required for valid JSON. If you're unsure, ask someone on the team before committing.
 
-# Thorndon club website
+## About
 
 [![Synthetic home page load](https://github.com/JaronSteenson/thorndon-club/actions/workflows/synthetic-home-page-load.yml/badge.svg)](https://github.com/JaronSteenson/thorndon-club/actions/workflows/synthetic-home-page-load.yml)
 
@@ -55,17 +56,6 @@ to the `master` branch.
 This must pass linting and formatting checks before it will deploy.
 If you are stuck, you can manually deploy and skip the checks by running the workflow
 [manually from the Actions tab in GitHub](https://github.com/JaronSteenson/thorndon-club/actions/workflows/build-deploy.yml).
-
-## Jaron's random .bashrc snippets
-
-```shell
-guake-thorndon() {
-  guake -r thorndon-club && cd ~/code/thorndon-club/ && nvm use 21.6.1 && npm run dev;
-}
-
-thorndon-test-site-deploy() {
-  DEPLOYED_COMMIT="$(git log --pretty=format:'%h' -n 1)";
-  GIT_HUB_PAGES_REPO="jaronsteenson.github.io";
   npm run prod && rm -rf ../$GIT_HUB_PAGES_REPO/* && cp -r out/. ../$GIT_HUB_PAGES_REPO && (cd ../$GIT_HUB_PAGES_REPO && git add -A && git commit -m "Deploy test site: $DEPLOYED_COMMIT" && git push);
 }
 ```
