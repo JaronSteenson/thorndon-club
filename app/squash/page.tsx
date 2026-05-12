@@ -69,7 +69,7 @@ export default function Squash() {
             </section>
             <section>
                 <h2>Interclub</h2>
-                <InterclubInto />
+                <InterclubInto sport={'squash'} />
                 <p>
                     Autumn Interclub starts in March, Winter Interclub in May/June, and Spring Interclub in
                     August/September.

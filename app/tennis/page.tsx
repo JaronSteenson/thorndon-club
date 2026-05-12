@@ -1,11 +1,13 @@
 import BookingCourtsParagraph from '@/app/_components/BookingCourtsParagraph';
 import ProspectiveMembersWelcome from '@/app/_components/ProspectiveMembersWelcome';
-import OperationsManagerContactCard from '@/app/_components/ContactCards/OperationsManagerContactCard';
 import InterclubInto from '@/app/_components/InterclubIntro';
 import Link from 'next/link';
 import TennisCaptainContactCard from '@/app/_components/ContactCards/TennisCaptainContactCard';
 import TennisPageSlideShow from '@/app/tennis/TennisPageSlideShow';
 import Beginners from '@/app/_components/Beginners';
+import globals from '@/app/globals.json';
+
+const { tennisClubDayTimes } = globals;
 
 export default function Tennis() {
     return (
@@ -21,9 +23,9 @@ export default function Tennis() {
                 <h2>Club days</h2>
                 <p>Tennis club days run every week:</p>
                 <ul>
-                    <li>Wednesday 5.30pm to 7.30pm</li>
-                    <li>Saturdays 2pm to 6pm</li>
-                    <li>Sundays 2pm to 6pm</li>
+                    {tennisClubDayTimes.map((time) => (
+                        <li key={time}>{time}</li>
+                    ))}
                 </ul>
                 <ProspectiveMembersWelcome />
                 <h3>Format</h3>
@@ -31,13 +33,13 @@ export default function Tennis() {
                     Club days are friendly tennis matches coordinated by a volunteer club member on each club
                     day. All people that turn up to play will be matched with three other players to play
                     doubles matches. An afternoon tea is served on Saturdays and the bar is open on Wednesdays
-                    from 5.30pm and Saturdays from 4.30pm.
+                    from 4.30pm.
                 </p>
                 <Beginners />
             </section>
             <section>
                 <h2>Interclub</h2>
-                <InterclubInto />
+                <InterclubInto sport={'tennis'} />
                 <h3>Format</h3>
                 <p>
                     Where possible, you will be placed in a team from 4-8 players of similarly graded ability

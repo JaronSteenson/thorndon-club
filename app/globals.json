@@ -19,6 +19,11 @@
     "tennisCaptain": "Tim Gudsell",
     "tennisCaptainEmail": "timgudsell@hotmail.com",
     "tennisCaptainPhone": "0211896220",
+    "tennisClubDayTimes": [
+        "Wednesday 5.30pm to 7.30pm",
+        "Saturdays 1pm to 5pm",
+        "Sundays 1pm to 5pm"
+    ],
     "squashTournaments": [
         {
             "name": "Thorndon ARDEX Open",
